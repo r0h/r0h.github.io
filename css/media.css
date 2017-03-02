@@ -1,0 +1,196 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.menu_image {
+		margin: 0 0px;
+		height: 235px;
+	}
+	.menu_image_2 {
+		margin: auto 22px;
+	}
+	.menu_image_3 {
+		margin: 0 0px;
+	}
+	.fade1 {
+		margin: -46% 0 0% -26%;
+	}
+	.fade-r1 {
+		margin: -16% 0 0 -31%;
+	}
+	.fade-r2 {
+		margin: -6% 0 0 -33%;
+	}
+	.fade-m1 {
+		margin: -1% 0 0 -28%;
+	}
+
+}
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.menu {
+		font-size: 20px;
+	}
+	.fade1 {
+		margin: -43% 0 0 -25%;
+	}
+	.fade2 {
+		margin: 8% 0 0 -25%;
+	}
+	.fade-m1 {
+		margin: -1% 0 0 -26%;
+	}
+	.fade-r1 {
+		margin: -15% 0 0 -32%;
+	}
+	.fade-r2 {
+		margin: -4% 0 0 -33%;
+	}
+	.menu_image {
+		height: 180px;
+	}
+	.footer_img {
+		height: 9em;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.menu {
+		font-size: 15px;
+	}
+	.fade1 {
+		margin: -43% 0 0 -25%;    
+	}
+	.menu_image {
+		height: 150px;
+		width: 150px;
+	}
+}
+@media only screen and (max-width : 545px) {
+	.menu_image {
+		height: 120px;
+		width: 120px;
+	}
+	.menu_image_2 {
+		margin: 0 10px;
+	}
+	.fade1 {
+		margin: -50% 0 0 -25%;    
+	}
+	.menu_image {
+		border: 1px solid #a5a5a5;
+	}
+	.menu_image_2 {
+		border: 1px solid rgba(224, 104, 38, 0.8);
+	}
+	.menu_image:hover {
+		border: 2px solid #fff;
+	}
+	.footer_img {
+		height: 6em;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.menu_image_2 {
+		margin: 0 5px;
+	}
+	.fade1 {
+		margin: -26% 0 0 -25%;    
+	}
+	.fade-r2 {
+		margin: 2% 0 0 -28%;
+	}
+	.menu_image {
+		border: 1px solid #a5a5a5;
+	}
+	.menu_image_2 {
+		border: 1px solid rgba(224, 104, 38, 0.8);
+	}
+	.menu_image:hover {
+		border: 2px solid #fff;
+	}
+}
+
+/* 400px Devices, Phones */
+@media only screen and (max-width : 430px) {
+	.menu_image {
+		height: 89px;
+		width: 89px;
+	}
+	.menu {
+		font-size: 14px;
+	}
+	.fade1 {
+		margin: -57% 0 0 -25%;
+	}
+	.fade2 {
+		margin: 4% 0 0 -25%;
+	}
+	.fade-m1 {
+		margin: -3% 0 0 -30%;
+	}
+	.fade-r2 {
+		margin: 2% 0 0 -33%;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+	.menu_image_1 {
+		margin: 0 -2px;
+	}
+	.menu_image_2 {
+		margin: 0 5px;
+	}
+	.menu_image_3 {
+		margin: 0 -2px;
+	}
+	.fade1 {
+		margin: -55% 0 0 -25%;
+	}
+	.fade-r1 {
+		margin: -16% 0 0 -31%;
+	}
+	.fade-r2 {
+		margin: 0% 0 0 -34%;
+	}
+	.circles {
+		display: block;
+	}
+	.footer_img {
+		height: 4em;
+	}
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+
+}
