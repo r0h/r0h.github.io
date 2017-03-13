@@ -30,7 +30,7 @@ $(document).ready(function() {
 	// header-carousel
 	$(".carousel").owlCarousel({
 		loop:true,
-		animateOut: 'fadeOut',
+		
 		responsiveClass:true,
 		items:1,
 		autoplay: true,

@@ -1,0 +1,79 @@
+body {
+	font-family: sans-serif, arial;
+	font-size: 16px;
+	background-color: #D2E5F1;
+	min-width: 320px;
+	text-shadow: 0px 1px 1px #5E94BC;
+	font-weight: normal;
+}
+a:focus {
+	outline: none;
+}
+.header {
+	text-align: center;
+	font-weight: bold;
+}
+.name {
+	font-size: 47px;
+	font-family: "Engine", sans-serif;
+	margin-top: 15px;
+}
+.menu ul li {
+	display: inline-block;
+	margin: auto 10px;
+	background: #F0F8FF;
+	border-radius: 5px;
+}
+.menu ul li:hover {
+	background: #DEE6ED;
+}
+.menu ul li a {
+	padding: 2px 11px 2px;
+}
+.line {
+	min-height: 10px;
+	text-align: center;
+}
+.line img {
+	width: 100%
+}
+.pc img {
+	width: 100%;
+	border: 12px solid gray;
+	border-radius: 35px;
+}
+.site_link {
+	margin-top: 30px;
+}
+.site_link a {
+	background: #5E94BC;
+	padding: 10px 20px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 14px;
+	color: #fff;
+}
+.site_link a:hover {
+	background: #74AAD2;
+}
+.site_info {
+	margin-top: 20px;
+}
+.block_name {
+	color: #507ade;
+}
+.portfolio_item {
+	margin: 20px auto;
+}
+.development {
+    font-size: 10px;
+    text-align: right;
+    margin-bottom: 10px;
+}
+.block_subname,
+.block_content {
+	line-height: 33px;
+}
+.discription {
+	margin-top: 10px;
+}
