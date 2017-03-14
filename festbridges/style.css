@@ -913,4 +913,8 @@ footer {
 
 }
 
-/*-------------MEDIA END HERE-------------
+/*-------------MEDIA END HERE-------------*/
+.more-link span {
+	float: right;
+	margin-right: 15px;
+}
