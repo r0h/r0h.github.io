@@ -1,0 +1,916 @@
+
+
+Theme Name: The Festival Bridges
+Theme URI: https://github.com/r0h
+Description: The Festival Bridges
+Author: Goliienko O.
+Author URI: https://github.com/r0h
+Version: 1.0
+*/
+*::-webkit-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*::-moz-placeholder {
+	color: #666;
+	opacity: 1;
+}
+*:-ms-input-placeholder {
+	color: #666;
+	opacity: 1;
+}
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid {
+	
+}
+body input:required:valid,
+body textarea:required:valid {
+}
+body {
+	font-family: Arial, Tahoma, Helvetica, sans-serif;
+	height: 100%;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	min-height: 100%;
+	background: #103378 url(img/body_bgr.jpg) no-repeat top center;
+	color: #fff;
+	text-shadow: 0px 1px 1px #333;
+}
+a:focus {
+	outline: none;
+}
+h2 {
+	font-size: 20px;
+	margin: 0px auto;
+}
+
+/*-------------HEADER START HERE-------------*/
+
+
+.site_name{
+	text-align: left;
+	margin-top: 20px;
+}
+.site_name img {
+	max-width: 100%;
+}
+.logo {
+	text-align: right;
+	margin-top: 10px;
+}
+.top_menu {
+	padding-left: 0;
+}
+.top_menu .current-menu-item {
+	background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+}
+.main_menu {
+	margin-left: 9px;
+}
+.main_menu ul li{
+	display: inline-block;
+	background: #175C9C;
+	background: linear-gradient(to top, rgba(8,77,141,1), rgba(44,113,177,1));
+	padding: 7px 5px 3px 5px;
+	border-radius: 5px;
+	margin: 3px 1px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+}
+.main_menu ul li:hover {
+	background: #12A0D4;
+	background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+}
+.main_menu ul li:active {
+	background: #12A0D4;
+	background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+}
+.main_menu ul li a {
+	color: #fff;
+	text-transform: uppercase;
+	padding: 9px 10px 4px;
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	white-space: nowrap;
+	text-shadow: 0px 1px 1px #333;
+}
+.lang_changer {
+	text-align: left;
+}
+.lang_changer ul {
+	margin: 0;
+	padding: 0;
+}
+.lang_changer ul li {
+	display: inline-block;
+	background: url(img/flag.png);
+	width: 40px;
+	height: 49px;
+	text-align: center;
+}
+.lang_changer ul li a {
+	font-size: 12px;
+	color: #fff;
+	text-shadow: 0px 1px 1px #333;
+	padding: 13px 8px 12px 7px;
+	position: relative;
+	top: 9px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+#menu-item-1049-en,
+#menu-item-1049-ru,
+#menu-item-1049-cz,
+#menu-item-1049-de,
+#menu-item-1052-en,
+#menu-item-1052-ru,
+#menu-item-1052-cz,
+#menu-item-1052-de,
+#menu-item-1050-en,
+#menu-item-1050-ru,
+#menu-item-1050-cz,
+#menu-item-1050-de,
+#menu-item-1051-en,
+#menu-item-1051-ru,
+#menu-item-1051-cz,
+#menu-item-1051-de {
+	display: none;
+}
+
+/*-------------HEADER END HERE-------------*/
+
+
+
+/*-------------SECOND HEADER START HERE-------------*/
+
+.gallery_item {
+	text-align: center;
+	position: relative;
+	margin: 10px auto;
+	cursor: pointer;
+	width: 100%;
+	height: 245px;
+	border-radius: 6px;
+}
+.gallery_item .menu ul {
+	padding: 0;
+	margin: 0;
+}
+.gallery_item .menu ul li {
+	display: inline-block;
+	background: url(img/gallery/folder.png);
+	width: 169px;
+	height: 70px;
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: -3px;
+}
+.gallery_item .menu ul li a {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-family: Georgia;
+	font-size: 14px;
+	line-height: 16px;
+	font-style: italic;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #333;
+	color: #fff;
+	width: 308px;
+	left: -68px;
+	padding: 11px 0px 200px;
+	top: 3px;
+}
+.second_header_padding {
+	padding: 0px 35px;
+}
+.second_header_padding .gallery_media {
+	width: 30%;
+}
+.line {
+	margin: 5px auto;
+}
+.line img {
+	max-width: 100%;
+}
+.gallery1 {
+	background: url(img/gallery/gallery1.jpg);
+}
+.gallery2 {
+	background: url(img/gallery/gallery2.jpg);
+}
+.gallery3 {
+	background: url(img/gallery/gallery3.jpg);
+}
+.gallery1 .menu ul li a {
+	padding: 11px 0px 194px;
+}
+.gallery3 .menu ul li a,
+.gallery2 .menu ul li a {
+	padding: 19px 0px 218px;
+}
+.gallery6 .menu ul li a {
+	padding: 2px 0px 194px;
+}
+
+.gallery4 {
+	background: url(img/gallery/gallery4.jpg);
+}
+.gallery5 {
+	background: url(img/gallery/gallery5.jpg);
+}
+.gallery6 {
+	background: url(img/gallery/gallery6.jpg);
+}
+
+
+
+/*second header for heastivals header-festival.php START*/
+.list_festivals {
+	width: 109%;
+}
+.list_festivals ul {
+	padding-left: 0;
+}
+.list_festivals ul .current-menu-item {
+	background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+}
+.list_festivals ul li {
+	list-style-type: none;
+	display: block;
+	background: #175C9C;
+	background: linear-gradient(to top, rgba(8,75,137,1), rgba(44,113,177,1));
+	line-height: 46px;
+	border-radius: 5px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+}
+.list_festivals ul li:hover {
+	background: #12A0D4;
+	background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+}
+.list_festivals ul li:active {
+	background: #12A0D4;
+	background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+}
+.list_festivals ul li:before {
+	content: "\f101";
+	font-family: FontAwesome;
+	font-size: 20px;
+	margin: auto 10px;
+}
+.list_festivals ul li a {
+	color: #fff;
+	font-size: 16px;
+	font-family: Georgia, Arial, Verdana, sans-serif;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: 0px 1px 1px #333;
+	height: 100%;
+	display: inline-block;
+	width: 89%;
+}
+.list_festivals ul li a:active {
+	background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+}
+.list_festivals ul li a br {
+	display: none;
+}
+#hide_slider {
+	display: none;
+}
+.slider {
+	margin: 14px 0;
+	width: 97%;
+}
+.slider .metaslider .slides img {
+	border-radius: 5px;
+}
+
+
+/*second header for heastivals header-festival.php END*/
+
+/*-------------SECOND HEADER END HERE-------------*/
+
+
+/*-------------CONTENT START HERE-------------*/
+.block_head {
+	position: relative;
+	width: 93%;
+	background: #0164B3;
+	height: 40px;
+	margin: 10px 0px 10px 20px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #333;
+}
+.block_head i {
+	position: absolute;
+	font-size: 30px;
+	color: #FFFFFF;
+	margin-left: 11px;
+	top: 3px;
+}
+.block_head_name {
+	position: absolute;
+	top: 7px;
+	left: 36px;
+	font-size: 17px;
+	padding-top: 1px;
+	z-index: 10;
+}
+.block_head_index:hover {
+	background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+}
+.blog_item {
+	margin-bottom: 20px;
+}
+.miniatura {
+	margin-left: 9px;
+	cursor: pointer;
+}
+.page_title {
+	font-size: 16px;
+	font-family: Arial, Tahoma;
+	color: #fff;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #333;
+	text-transform: uppercase;
+}
+.page_title br {
+	display: none;
+}
+.content_page {
+	padding-left: 20px;
+}
+.post_title {
+	top: 7px;
+	left: 36px;
+	font-size: 17px;
+	color: #fff;
+}
+.miniatura img {
+	width: 100%;
+	height: 100%;
+}
+.festival_results {
+	width: 100%;
+}
+.block_head_inside {
+	position: relative;
+	width: 95%;
+	background: #0164B3;
+	height: 40px;
+	margin: 10px 0px;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px #333;
+}
+.block_head_inside i {
+	position: absolute;
+	font-size: 30px;
+	color: #FFFFFF;
+	margin-left: 11px;
+	top: 3px;
+}
+.content_page p {
+	font-size: 13px;
+}
+.pagination {
+	text-align: center;
+	margin: 60px auto 30px auto;
+	font-size: 16px;
+}
+.pagination span {
+	display: inline-block;
+	line-height: 20px;
+	width: 15px;
+	border-radius: 4px;
+	color: #fff;
+	margin-left: 5px;
+}
+.pagination a {
+	display: inline-block;
+	line-height: 20px;
+	width: 15px;
+	border-radius: 4px;
+	color: #fff;
+	margin-left: 5px;
+}
+.pagination a:hover {
+	text-decoration: none;
+	color: #28B5E9;
+}
+.pagination .active {
+	color: #575757;
+}
+.contacts_mail a {
+	color: #fff;
+}
+/*Отзывы*/
+.easy-t-cycle-pager span.cycle-pager-active {
+	color: rgb(18,160,212);
+}
+/*Отзывы*/
+.form-color {
+	color: black;
+}
+/*Application*/
+.application {
+	font-size: 12px;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.application h3 {
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: normal;
+	text-shadow: 0px 1px 1px #000;
+	font-family: Arial, Tahoma;
+}
+.application .form_align_bottom {
+	line-height: 26px;
+	padding-top: 15px;
+}
+.application .align_center {
+	text-align: center;
+}
+.application .form_full_width {
+	width: 100%;
+}
+.application {
+	line-height: 22px;
+}
+.border {
+	border: 1px solid #fff;
+	padding-bottom: 8px;
+}
+.competition_number{
+	padding-left: 0;
+}
+.recaptcha {
+	padding-top: 10px;
+}
+.send {
+	padding: 6px 11px;
+	margin-top: 17px;
+}
+/*Application*/
+
+#toTop {
+	width: 40px;
+	border: 1px solid #ccc;
+	border-radius: 10em;
+	background: #f7f7f7;
+	text-align: center;
+	padding: 4px 5px 5px 5px;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	cursor: pointer;
+	display: none;
+	color: #333;
+	font-family: verdana;
+	font-size: 16px;
+	height: 40px;
+	opacity: 0.6;
+	z-index: 3;
+}
+
+/*-------------CONTENT END HERE-------------*/
+
+/*-------------SIDEBAR START HERE-------------*/
+
+.ytc-promotion,
+.ytc-youtubelink {
+	display: none;
+}
+.ytc-paginationlink,
+.ytc-youtubelink a {
+	color: #fff;
+}
+.sidebar {
+	margin-top: 10px;
+	width: 87%;
+}
+.sidebar_festival_menu {
+	width: 89%;
+}
+.sidebar_festival_menu ul {
+	padding-left: 0;
+}
+.sidebar_festival_menu ul li {
+	list-style-type: none;
+	border-bottom: 1px solid rgba(10,91,166,1);
+}
+.sidebar_festival_menu ul li:before {
+	content: "\f101";
+	font-family: FontAwesome;
+	font-size: 23px;
+	margin: auto 10px;
+}
+.sidebar_festival_menu ul li a {
+	color: #fff;
+	width: 89%;
+	height: 100%;
+	text-transform: uppercase;
+	line-height: 20px;
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	text-shadow: 0px 1px 1px #000;
+}
+.sidebar_festival_menu ul li a:hover {
+	color: #e4fe0f;
+}
+.sidebar_festival_menu ul li:hover {
+	color: #e4fe0f;
+}
+.sidebar_festival_menu ul .current-menu-item {
+	color: #e4fe0f;
+}
+.sidebar_festival_menu ul .current-menu-item a {
+	color: #e4fe0f;
+}
+/*Calendar*/
+.ecwd_theme_calendar .calendar-head {
+	background: #0164B3 !important;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.ecwd-widget-mini .ecwd_calendar_view_dropdown {
+	display: none;
+}
+.ecwd_theme_calendar table.cal_blue.mini td ul.events li {
+	background-color: #C33729 !important;
+}
+.ecwd_theme_calendar .calendar-head .current-month {
+	font-size: 14px !important;
+}
+.ecwd_theme_calendar .calendar-head .current-month div {
+	font-size: 13px !important;
+	line-height: 16px;
+}
+.sidebar h5 {
+	display: none;
+}
+.ecwd-event {
+	background-color: inherit;
+}
+.cal_blue.ecwd_calendar_container {
+	background: #A6D8EE !important;
+}
+.ecwd_theme_calendar table.cal_blue.ecwd_calendar_container .weekend {
+	background: #91C3DD !important;
+}
+.ecwd_theme_calendar table.cal_blue.ecwd_calendar_container .day-without-date {
+	background: #F6F6E7 !important;
+}
+.ecwd_theme_calendar table.cal_blue.mini .current-day {
+	background: #0056A5 !important;
+}
+.ecwd-widget-mini .calendar-head {
+	height: 37px;
+}
+.ecwd_theme_calendar .ecwd_calendar.ecwd-widget-mini .ecwd-events-day-details li {
+	background: #E4FFFF !important;
+	padding: 0px 0 !important;
+}
+/*Calendar*/
+
+/*-------------SIDEBAR END HERE-------------*/
+
+
+/*-------------FOOTER START HERE-------------*/
+
+footer {
+	margin-top: 50px;
+}
+.copyright {
+	text-align: center;
+	margin-bottom: 20px;
+}
+.development {
+	font-size: 10px;
+	text-align: right;
+	margin-bottom: 10px;
+}
+
+
+/*-------------MEDIA START HERE-------------*/
+
+
+/*==========  Desktop First Method  ==========*/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.second_header_padding .gallery_media {
+		width: 33.33333333%;
+	}
+	.lang_changer {
+		text-align: right;
+	}
+	.gallery_item{
+		width: 106%;
+	}
+	.sidebar {
+		width: 99%;
+	}
+	.list_festivals ul li {
+		line-height: 39px;
+	}
+	.slider {
+		width: 104%;
+	}
+	.sidebar_festival_menu {
+		width: 99%;
+	}
+	.sidebar_festival_menu ul li a {
+		width: 88%;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.logo {
+		display: none;
+	}
+	.button_menu {
+		position: relative;
+		float: right;
+		background: linear-gradient(to top, rgba(18,160,212,1), rgba(55,196,248,1));
+		padding: 3px 13px 1px 13px;
+		border-radius: 5px;
+		margin: -26px 34px 3px 1px;
+		box-shadow: 0 2px 3px rgba(0, 0, 0, .5);
+		border: 1px solid rgba(18,160,212,1);
+	}
+	.button_menu div {
+		display: inline-block;
+	}
+	.button_menu ul {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	.button_menu ul li a {
+		color: #fff;
+	}
+	.main_menu {
+		display: none;
+		position: absolute;
+		z-index: 15;
+		right: 0;
+		margin: 0px 33px 0px 0px;
+	}
+	.main_menu ul li {
+		display: block;
+		text-align: right;
+	}
+	.top_menu {
+		margin: 0;
+	}
+	.gallery_item {
+		height: 125px;
+	}
+	.second_header_padding {
+		padding: 0 33px 0 15px;
+	}
+	.gallery_item .menu ul li a {
+		width: 216px;
+		left: -24px;
+		padding: 11px 0px 82px;
+	}
+	.gallery3 .menu ul li a,
+	.gallery2 .menu ul li a {
+		padding: 19px 0px 90px;
+	}
+	.gallery1 .menu ul li a {
+		padding: 11px 0px 98px;
+	}
+	.gallery6 .menu ul li a {
+		padding: 2px 0px 75px;
+	}
+	.list_festivals {
+		width: 102%;
+	}
+	.no_padding {
+		padding: 0px;
+	}
+	.block_head {
+		margin: 10px 0px 10px 0px;
+		width: 100%;
+	}
+	.content_page {
+		padding-left: 0px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.main_menu {
+		margin: -2px 33px 0px 0px;
+	}
+	.button_menu {
+		margin: 15px 34px 3px 1px;
+	}
+	.gallery_item {
+		height: 69px;
+	}
+	.gallery_item .menu ul li a {
+		width: 162px;
+		left: 3px;
+		padding: 11px 0px 19px;
+		top: 3px;
+	}
+	.gallery3 .menu ul li a,
+	.gallery2 .menu ul li a {
+		padding: 19px 0px 27px;
+	}
+	.gallery1 .menu ul li a {
+		padding: 11px 0px 33px;
+	}
+	.gallery6 .menu ul li a {
+		padding: 2px 0px 10px;
+	}
+	.button_menu {
+		margin: -28px 34px 3px 1px;
+	}
+	.lang_changer {
+		display: none;
+	}
+	#menu-item-1049-en,
+	#menu-item-1049-ru,
+	#menu-item-1049-cz,
+	#menu-item-1049-de,
+	#menu-item-1052-en,
+	#menu-item-1052-ru,
+	#menu-item-1052-cz,
+	#menu-item-1052-de,
+	#menu-item-1050-en,
+	#menu-item-1050-ru,
+	#menu-item-1050-cz,
+	#menu-item-1050-de,
+	#menu-item-1051-en,
+	#menu-item-1051-ru,
+	#menu-item-1051-cz,
+	#menu-item-1051-de {
+		display: inline-block;
+	}
+	.button_menu {
+		margin: -78px 34px 3px 1px;
+	}
+	.main_menu {
+		margin: -51px 33px 0px 0px;
+	}
+	.gallery1,
+	.gallery2,
+	.gallery3,
+	.gallery4,
+	.gallery5,
+	.gallery6 {
+		background: none;
+	}
+	
+
+}
+/* Extra Small Devices, 660px */
+@media only screen and (max-width : 660px) {
+	.button_menu {
+		margin: -55px 34px 3px 1px;
+	}
+	.main_menu {
+		margin: -28px 33px 0px 0px;
+	}
+	.list_festivals {
+		width: 104%;
+	}
+}
+/* Extra Small Devices, 600px */
+@media only screen and (max-width : 600px) {
+	.button_menu {
+		margin: -59px 34px 0px 1px;
+	}
+	.main_menu {
+		margin: -33px 33px 0px 0px;
+	}
+}
+
+/* Extra Small Devices, 550px */
+@media only screen and (max-width : 550px) {
+	.second_header_padding .gallery_media {
+		width: 50%;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.button_menu {
+		margin: -29px 34px 0px 1px;
+	}
+	.main_menu {
+		margin: -2px 33px 0px 0px;
+	}
+	#menu-item-1049-en,
+	#menu-item-1049-ru,
+	#menu-item-1049-cz,
+	#menu-item-1049-de,
+	#menu-item-1052-en,
+	#menu-item-1052-ru,
+	#menu-item-1052-cz,
+	#menu-item-1052-de,
+	#menu-item-1050-en,
+	#menu-item-1050-ru,
+	#menu-item-1050-cz,
+	#menu-item-1050-de,
+	#menu-item-1051-en,
+	#menu-item-1051-ru,
+	#menu-item-1051-cz,
+	#menu-item-1051-de {
+		display: block;
+	}
+	.second_header_padding .gallery_media {
+		width: 100%;
+	}
+	.button_menu {
+		margin: -29px 6px 0px 1px;
+	}
+	.main_menu {
+		margin: -2px 7px 0px 0px;
+	}
+	.gallery_item {
+		height: 51px;
+	}
+	.list_festivals {
+		width: 106%;
+	}
+	.list_festivals ul li::before {
+		display: none;
+	}
+	.list_festivals ul li a {
+		margin-left: 4px;
+	}
+	.second_header_padding {
+		padding: 0 16px 0 0px;
+	}
+}
+
+/* Custom, 380px */
+@media only screen and (max-width : 400px) {
+	.sidebar_festival_menu ul li::before {
+		display: none;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+	.main_menu {
+		display: inline-block !important;
+	}
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
+
+/*-------------MEDIA END HERE-------------
