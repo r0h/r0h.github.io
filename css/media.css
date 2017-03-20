@@ -1,0 +1,88 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.section_portfolio .portfolio_item .portfolio_hover {
+		width: 300px;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+
+	}
+	.section_portfolio .portfolio_item h3 {
+		margin: 10px 0 0px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	.section_education .left {
+		text-align: left;
+		border: none;
+	}
+	.section_exp .section_content .exp_item .animation_2 .date {
+		float: left;
+	}
+	.section_exp .section_content .exp_item .animation_2 {
+		margin-bottom: 5px;
+	}
+	.section_exp .section_content .exp_item .animation_3 {
+		margin-bottom: 30px;
+	}
+	section .descr_wrap .section_descr {
+		margin-bottom: 85px;
+	}
+
+}
+
+/* Custom media for header h1 495px */
+@media only screen and (max-width : 495px) {
+	.top_wrapper .top_text h1 {
+		padding: 10px 10px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}

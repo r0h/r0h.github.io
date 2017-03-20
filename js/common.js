@@ -1,159 +1,72 @@
 $(document).ready(function() {
 
-	//Попап менеджер FancyBox
-	//Документация: http://fancybox.net/howto
-	//<a class="fancybox"><img src="image.jpg" /></a>
-	//<a class="fancybox" data-fancybox-group="group"><img src="image.jpg" /></a>
-	// $(".fancybox").fancybox();
+	$(".section_header").animated("fadeInDown", "fadeOutUp");
 
-	$('.fancybox').on('click', function(){
-		$.fancybox({
-			padding: 0,
-			autoSize: false,
-			href: 'cv_eng.php',
-			type: 'ajax'
-		});
+	$(".animation_1").animated("flipInY", "fadeOut");
+	$(".animation_2").animated("fadeInLeft", "fadeOutDown");
+	$(".animation_3").animated("fadeInRight", "fadeOutDown");
+
+	$(".portfolio_item").animated("zoomIn", "flipOutX");
+
+	$(".popup_image").magnificPopup({
+		type:"image",
+		mainClass: "portfolio_popup"
+	});
+	$(".popup").magnificPopup({
+		midClick: true,
+		mainClass: "portfolio_popup"
 	});
 
-	$(".mailme").fancybox({
-		autoSize: false
-	});
-	$(".gallery").fancybox({
-		padding: 0
-	});
-	$(".gallery2").fancybox({
-		padding: 0
-	});
 
-	//Каруселька
-	//Документация: http://owlgraphic.com/owlcarousel/	
-	// header-carousel
-	$(".carousel").owlCarousel({
-		loop:true,
-		
-		responsiveClass:true,
-		items:1,
-		autoplay: true,
-		dots: false
+	function heightResize() {
+		$(".main_head").css("height", $(window).height());
+		$(".top_mnu ul").css("margin-top", $(window).height()*0.35);
+	};
+	heightResize();
+	$(window).resize(function() {
+		heightResize();
 	});
 
-	//gallery - carousels
-	var owl = $(".details")
-	var nextButton1 = $('.customNextBtn')
-	var prevButton1 = $('.customPrevBtn')
 
-	var owl2 = $(".look")
-	var nextButton2 = $('.customNextBtn-2')
-	var prevButton2 = $('.customPrevBtn-2')
-
-	
-	main_carousel(owl2);
-	next(owl2, nextButton2);
-	prev(owl2, prevButton2);
-	
-	main_carousel(owl);
-	next(owl, nextButton1);
-	prev(owl, prevButton1);
-
-	function main_carousel(number){
-		return number.owlCarousel({
-		stagePadding: 50,
-		loop:true,
-		margin: 10,
-		responsive:{
-
-			0:{
-				items:2
-			},
-			480:{
-				items:4
-			},
-			630:{
-				items:6
-			},
-			992:{
-				items:10
-			},
-			1200:{
-				items:13
-			}
-		}
+	$(".toggle_mnu").click(function() {
+		$(".sandwich").toggleClass("active");
 	});
 
+	$(".top_mnu ul a").click(function() {
+		$(".top_mnu").fadeOut(600);
+		$(".sandwich").toggleClass("active");
+		$(".top_text").css("opacity", "1");
+		$(".section_header h2").css("opacity", "1");
+	}).append("<span>");
+
+	$(".toggle_mnu").click(function() {
+		if ($(".top_mnu").is(":visible")) {
+			$(".top_text").css("opacity", "1");
+			$(".section_header h2").css("opacity", "1");
+			$(".top_mnu").fadeOut(600);
+			$(".top_mnu li a").removeClass("fadeInUp animated");
+		} else {
+			$(".top_text").css("opacity", ".1");
+			$(".section_header h2").css("opacity", ".1");
+			$(".top_mnu").fadeIn(600);
+			$(".top_mnu li a").addClass("fadeInUp animated");
 		};
-	// Go to the next item
-	function next(number_owl, nextButton){
-		return  nextButton.click(function() {
-			number_owl.trigger('next.owl.carousel');
-		});
-	};
-	// Go to the previous item
-	// With optional speed parameter
-	// Parameters has to be in square bracket '[]'
-	function prev(number_owl, prevButton){
-		return prevButton.click(function() {
-			number_owl.trigger('prev.owl.carousel', [700]);
-		});
-	};
-
-	//Аякс отправка форм
-	//Документация: http://api.jquery.com/jquery.ajax/
-	$("form").submit(function() {
-		$.ajax({
-			type: "GET",
-			url: "mail.php",
-			data: $("form").serialize()
-		}).done(function() {
-			alert("Thank you for message!");
-			setTimeout(function() {
-				$.fancybox.close();
-			}, 1000);
-		});
-		return false;
 	});
 
-	//Анимация:
-	//animateCss - function
-	$.fn.extend({
-		animateCss: function (animationName) {
-			var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-			this.addClass('animated ' + animationName).one(animationEnd, function() {
-				$(this).removeClass('animated ' + animationName);
-			});
-		}
+	$(".portfolio_item").each(function(i){
+		$(this).find(".popup").attr("href", "#work_" + i);
+		$(this).find(".portfolio_description").attr("id", "work_" + i);
 	});
 
-	//animate Circles whith animateCss
-	$(function(){
-		
-		$('.menu_image_1').hover(function(){
-			$('.fade').show(),
-			$('.fade1').animateCss('zoomIn'),
-			$('.fade2').animateCss('zoomIn')
-		})
-		$('.menu_image_2').hover(function(){
-			$('.fade-m').show(),
-			$('.fade-m1').animateCss('zoomIn')			
-		})
-		$('.menu_image_3').hover(function(){
-			$('.fade-r').show(),
-			$('.fade-r1').animateCss('zoomIn'),
-			$('.fade-r2').animateCss('zoomIn')		
-		})
-	});
+	$(".top_mnu ul a").mPageScroll2id();
 
-	//Ajax загрузка галереи
-	$('.load_gallery').hide()
-	$('.load_gallery_2').hide()
+});
+$(window).load(function() {
 
-	$('.menu_image_1').click(function(){		
-		$('.load_gallery_2').hide(1000);
-		$('.load_gallery').slideToggle(1000);
-	});
+	$(".loader_inner").fadeOut();
+	$(".loader").delay(400).fadeOut("slow");
 
-	$('.menu_image_3').click(function(){
-		$('.load_gallery').hide(1000);
+	$(".top_text h1").animated("fadeInDown", "fadeOutUp");
+	$(".top_text p").animated("fadeInUp", "fadeOutDown");
 
-		$('.load_gallery_2').slideToggle(1000);
-	});
 });
