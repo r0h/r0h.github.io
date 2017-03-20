@@ -3,8 +3,8 @@ $(document).ready(function() {
 	$(".section_header").animated("fadeInDown", "fadeOutUp");
 
 	$(".animation_1").animated("flipInY", "fadeOut");
-	$(".animation_2").animated("fadeInLeft", "fadeOutDown");
-	$(".animation_3").animated("fadeInRight", "fadeOutDown");
+	$(".animation_2").animated("fadeInUp", "fadeOutDown");
+	$(".animation_3").animated("fadeInUp", "fadeOutDown");
 
 	$(".portfolio_item").animated("zoomIn", "flipOutX");
 
