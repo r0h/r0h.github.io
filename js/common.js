@@ -6,7 +6,7 @@ $(document).ready(function() {
 	$(".animation_2").animated("fadeInUp", "fadeOutDown");
 	$(".animation_3").animated("fadeInUp", "fadeOutDown");
 
-	$(".portfolio_item").animated("zoomIn", "flipOutX");
+	$(".portfolio_item").animated("zoomIn", "zoomOut");
 
 	$(".popup_image").magnificPopup({
 		type:"image",

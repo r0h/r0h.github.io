@@ -506,17 +506,21 @@ section .descr_wrap .section_descr:after {
   background-color: #444444;
 }
 
-.section_portfolio .portfolio_item {
+.section_portfolio .portfolio_block {
+  padding: 0;
+}
+
+.section_portfolio .portfolio_block .portfolio_item {
   padding: 0;
   text-align: center;
 }
 
-.section_portfolio .portfolio_item img {
+.section_portfolio .portfolio_block .portfolio_item img {
   max-width: 100%;
   border: 1px solid #000;
 }
 
-.section_portfolio .portfolio_item .portfolio_hover {
+.section_portfolio .portfolio_block .portfolio_item .portfolio_hover {
   position: absolute;
   top: 0;
   left: 0;
@@ -530,24 +534,24 @@ section .descr_wrap .section_descr:after {
   transition: all .5s;
 }
 
-.section_portfolio .portfolio_item:hover .portfolio_hover {
+.section_portfolio .portfolio_block .portfolio_item:hover .portfolio_hover {
   opacity: 1;
   padding-top: 8%;
 }
 
-.section_portfolio .portfolio_item h3 {
+.section_portfolio .portfolio_block .portfolio_item h3 {
   font-size: 13px;
   font-weight: bold;
   color: #EAEAEA;
   margin: 43px 0 0px;
 }
 
-.section_portfolio .portfolio_item p {
+.section_portfolio .portfolio_block .portfolio_item p {
   margin: 33px auto 27px;
   color: #888;
 }
 
-.section_portfolio .portfolio_item a {
+.section_portfolio .portfolio_block .portfolio_item a {
   background-color: transparent;
   border: 1px solid #fff;
   padding: 2px 10px;
