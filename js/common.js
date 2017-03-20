@@ -1,22 +1,9 @@
 $(document).ready(function() {
 
-	$(".section_header").animated("fadeInDown", "fadeOutUp");
-
-	$(".animation_1").animated("flipInY", "fadeOut");
-	$(".animation_2").animated("fadeInUp", "fadeOutDown");
-	$(".animation_3").animated("fadeInUp", "fadeOutDown");
-
-	$(".portfolio_item").animated("zoomIn", "zoomOut");
-
-	$(".popup_image").magnificPopup({
-		type:"image",
-		mainClass: "portfolio_popup"
+	$(".portfolio_item").each(function(i){
+		$(this).find(".popup").attr("href", "#work_" + i);
+		$(this).find(".portfolio_description").attr("id", "work_" + i);
 	});
-	$(".popup").magnificPopup({
-		midClick: true,
-		mainClass: "portfolio_popup"
-	});
-
 
 	function heightResize() {
 		$(".main_head").css("height", $(window).height());
@@ -27,6 +14,22 @@ $(document).ready(function() {
 		heightResize();
 	});
 
+	$(".section_header").animated("fadeInDown", "fadeOutUp");
+
+	$(".animation_1").animated("flipInY", "fadeOut");
+	$(".animation_2").animated("fadeInUp", "fadeOutDown");
+	$(".animation_3").animated("fadeInUp", "fadeOutDown");
+
+	$(".portfolio_item").animated("zoomIn", "zoomIn");
+
+	$(".popup_image").magnificPopup({
+		type:"image",
+		mainClass: "portfolio_popup"
+	});
+	$(".popup").magnificPopup({
+		midClick: true,
+		mainClass: "portfolio_popup"
+	});
 
 	$(".toggle_mnu").click(function() {
 		$(".sandwich").toggleClass("active");
@@ -51,11 +54,6 @@ $(document).ready(function() {
 			$(".top_mnu").fadeIn(600);
 			$(".top_mnu li a").addClass("fadeInUp animated");
 		};
-	});
-
-	$(".portfolio_item").each(function(i){
-		$(this).find(".popup").attr("href", "#work_" + i);
-		$(this).find(".portfolio_description").attr("id", "work_" + i);
 	});
 
 	$(".top_mnu ul a").mPageScroll2id();
