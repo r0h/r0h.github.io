@@ -436,7 +436,7 @@ section .descr_wrap .section_descr:after {
   margin-bottom: 20px;
 }
 
-.section_exp .section_content .exp_item .animation_2 .date {
+.section_exp .section_content .exp_item .date {
   float: right;
   padding: 2px 10px;
   background-color: #F15C18;
