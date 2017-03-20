@@ -6,7 +6,9 @@ body {
   position: relative;
   line-height: 1.6;
   -webkit-font-smoothing: antialised;
-  width: 100%;
+}
+
+body .wrapper {
   overflow-x: hidden;
 }
 
