@@ -50,3 +50,15 @@ document.addEventListener('touchend', function(event) {
 				}
 			}
 		}, false);
+
+prev.addEventListener('touchstart', function(event) {
+	if (event.targetTouches.length == 1) {
+		var myclick=event.targetTouches[0]; plusSlide(-1);
+	}
+}, false);
+
+next.addEventListener('touchstart', function(event) {
+	if (event.targetTouches.length == 1) {
+		var myclick=event.targetTouches[0]; plusSlide(1);
+	}
+}, false);
