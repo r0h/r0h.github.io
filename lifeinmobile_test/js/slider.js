@@ -54,18 +54,26 @@ document.addEventListener('touchend', function(event) {
 var prev = document.getElementsByClassName('prev')
 var next = document.getElementsByClassName('next')
 
-for (i=1; i < prev.length; i++) {
+for (i=0; i < prev.length; i++) {
 	prev[i].addEventListener('touchstart', function(event) {
+
+		function stopDefAction(evt) {evt.preventDefault();}
+		prev[i].addEventListener('click', stopDefAction, false);
+
 		if (event.targetTouches.length == 1) {
 			var myclick=event.targetTouches[0]; plusSlide(-1);
 		}
 	}, false);
 }
 
-for (i=1; i < next.length; i++) {
-next[i].addEventListener('touchstart', function(event) {
-	if (event.targetTouches.length == 1) {
-		var myclick=event.targetTouches[0]; plusSlide(1);
-	}
-}, false);
+for (i=0; i < next.length; i++) {
+	next[i].addEventListener('touchstart', function(event) {
+
+		function stopDefAction(evt) {evt.preventDefault();}
+		next[i].addEventListener('click', stopDefAction, false);
+
+		if (event.targetTouches.length == 1) {
+			var myclick=event.targetTouches[0]; plusSlide(1);
+		}
+	}, false);
 }
