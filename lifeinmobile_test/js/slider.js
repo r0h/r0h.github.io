@@ -9,8 +9,8 @@ function current(n) {
 }
 function showSlides(n) {
 	var i,
-		slides = document.getElementsByClassName("slider"),
-		mini = document.getElementsByClassName("mini");
+	slides = document.getElementsByClassName("slider"),
+	mini = document.getElementsByClassName("mini");
 
 	if (n > slides.length) {
 		slideNum = 1
@@ -27,3 +27,26 @@ function showSlides(n) {
 	slides[slideNum -1].style.display = "block";
 	mini[slideNum -1].className+= " active";
 }
+
+var initialPoint;
+var finalPoint;
+document.addEventListener('touchstart', function(event) {
+	event.preventDefault();
+	event.stopPropagation();
+	initialPoint=event.changedTouches[0];
+}, false);
+document.addEventListener('touchend', function(event) {
+	event.preventDefault();
+	event.stopPropagation();
+	finalPoint=event.changedTouches[0];
+	var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
+	var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
+	if (xAbs > 20 || yAbs > 20) {
+		if (xAbs > yAbs) {
+			if (finalPoint.pageX < initialPoint.pageX){
+				plusSlide(1);	}
+				else{
+					plusSlide(-1);	}
+				}
+			}
+		}, false);
