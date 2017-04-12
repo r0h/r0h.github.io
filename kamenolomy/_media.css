@@ -1,0 +1,495 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+	.np_1200 {
+		padding: 0;
+	}
+	.main_menu ul li:nth-child(3) {
+		width: 107px;
+	}
+	.main_menu ul li a {    
+		padding-left: 11px;
+		padding-right: 11px;
+	}
+	.main_menu {
+		padding-left: 0px;
+	}
+	.main_menu ul li ul {
+		width: 107px;
+	}
+	.top_phone {
+		width: 80%;
+	}
+	.head_text {
+		text-align: center;
+		position: absolute;
+		z-index: 2;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		top: 15%;
+	}
+	.realization_1 img {
+		width: 100%;
+	}
+	.sub_image1, .sub_image2 {
+		padding: 0;
+		width: 90%;
+	}
+	.sub_image2 {
+		float: right;
+	}
+	.realization .choise {
+		padding-left: 40px;
+		padding-right: 15px;
+		padding-bottom: 0px;
+	}
+	.choise p {
+		margin-bottom: 21px;
+		line-height: 26px;
+	}
+	.contact_img img {
+		width: 100%;
+	}
+	.contact .bootstrap_no_padding {
+		padding: 0;
+	}
+	.contact .reg {
+		margin-bottom: 25px;
+		font-size: 23px;
+	}
+	.bg_opacity img {
+		width: 90%;
+	}
+	.image_hover_right {
+		left: 23px;
+	}
+	.image_hover_min, .image_hover_right {
+		width: 91%;
+	}
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	.top_phone {
+		width: 100%;
+	}
+	.head_text p {
+		font-size: 29px;
+		letter-spacing: 10px;
+	}
+	.head_text .h1 {
+		font-size: 37px;
+	}
+	.head_text .line {
+		margin-bottom: 35px;
+	}
+	.oferta {
+		text-align: center;
+	}
+	.choise .oferta {
+		margin-top: 65px;
+	}
+	.choise a{
+		padding: 27px 90px;
+	}
+	.contact {
+		padding-left: 40px;
+		padding-right: 15px;
+	}
+	.contact .contact_pb {
+		margin-bottom: 2px;
+	}
+	.footer_menu ul li {
+		width: 140px;
+	}
+	.footer_menu ul li:nth-child(2) {
+		text-align: right;
+	}
+	.realization .choise {
+		margin-top: 15px;
+	}
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	
+
+	.head_text {
+		top: 17%;
+	}
+	.head_text h2 {
+		font-size: 20px;
+		margin: 0 0 21px 0;
+	}
+	.head_text img {
+		width: 62px;
+	}
+	.head_text p {
+		margin-top: 52px;
+		font-size: 35px;
+	}
+	.head_text .h1 {
+		font-size: 43px;
+	}
+	.head_text .line {
+		margin-bottom: 87px;
+		margin-top: 10px;
+		width: 300px;
+	}
+	.head_text a {
+		font-size: 15px;
+		padding: 30px 78px;
+	}
+	.logo .top {
+		font-size: 20px;
+	}
+	.logo .name, .logo .name2 {
+		font-size: 26px;
+		letter-spacing: 4.5px;
+	}
+	.top_phone .phone {
+		font-size: 18px;
+		bottom: 4px;
+	}
+	.main_menu {
+		display: none;
+
+	}
+	.main_menu ul {
+		position: absolute;
+		z-index: 4;
+		top: 132px;
+		background-color: #fff;
+		width: 100%;
+		padding-top: 20px;
+	}
+	.main_menu ul li {
+		display: block;
+		position: relative;
+		font-size: 37px;
+		letter-spacing: 6px;
+		line-height: 90px;
+		border: none;
+	}
+	.main_menu ul li a {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	.main_menu ul li:nth-child(3) {
+		width: 100%;
+	}
+	.main_menu ul li:nth-child(3):hover {
+		border: none;
+	}
+	.main_menu ul li ul li:nth-child(4) {
+		border: none;
+	}
+	.main_menu ul li ul li:nth-child(3):hover {
+		border: none;
+	}
+	.main_menu ul li ul {
+		height: 200px; 
+		width: 100%;
+		margin-left: 0px;
+		border: none;
+		display: none;
+		position: relative;
+		top: 0;
+		padding-top: 0;
+	}
+	.main_menu ul li ul li {
+		border: none;
+		font-size: 25px;
+	}
+	.main_menu ul li ul li:hover {
+		background-color: transparent;
+		border: none;
+	}
+	.main_menu ul li ul li a {
+		line-height: 55px;
+	}
+	.main_menu ul li ul li:hover a {
+		color: #A27F6A;
+	}
+	.uslugi_item {
+		border-right: none;
+	}
+	.section_header {
+		margin-bottom: 50px;
+	}
+	.uslugi_number {
+		font-size: 71px;
+		font-family: 'Merriweather',Georgia, serif;
+		font-weight: 900;
+	}
+	.uslugi_name {
+		font-size: 19px;
+	}
+	.realization .choise {
+		padding-left: 15px;
+		padding-right: 15px;
+		padding-bottom: 0px;
+	}	
+	.main_image {
+		margin-left: 15px;
+		margin-right: 15px;
+	}
+	.uslugi_border_bl {
+		border-left: 2px solid #DADADA;
+		border-bottom: 2px solid #DADADA;
+	}
+	.uslugi_border_t {
+		border-top: 2px solid #DADADA;
+		margin-top: -2px;
+	}
+	.uslugi_border_r {
+		border-left: 2px solid #DADADA;
+	}
+	.navBtn {
+		top: 25%;
+	}
+
+
+}
+
+
+/* Custom media for header */
+@media only screen and (max-width : 690px) {
+	.logo .top {
+		font-size: 17px;
+	}
+	.logo .name, .logo .name2 {
+		font-size: 23px;
+	}
+	.top_phone {
+		margin-left: 10px;
+	}
+	.main_info_bg {
+		top: 60px;
+	}
+	.top_phone .phone {
+		font-size: 16px;
+	}
+	.head_text h2 {
+		font-size: 19px;
+		margin: 0 0 6px 0;
+	}
+	.head_text {
+		top: 11%;
+	}
+	.head_text p {
+		font-size: 20px;
+		margin-top: 0px;
+	}
+	.head_text .h1 {
+		font-size: 29px;
+	}
+	.head_text .line {
+		margin-bottom: 60px;
+	}
+	.head_text a {
+		font-size: 16px;
+		padding: 31px 70px;
+	}
+	.head_text img {
+		margin-bottom: 21px;
+	}
+	.uslugi_item {
+		padding-bottom: 0;
+	}
+	.uslugi_item_inside {
+		height: auto;
+	}
+	.contact {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.navBtn {
+		top: 27%;
+		font-size: 98px;
+	}
+
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+	.main_info_bg .background {
+		height: 700px;
+	}
+	.head_text {
+		top: 6%;
+	}
+	.head_text h2 {
+		font-size: 13px;
+		margin: 0 0 6px 0;
+		letter-spacing: 4px;
+	}
+	.head_text img {
+		margin-bottom: 13px;
+	}
+	.head_text p {
+		font-size: 19px;
+		letter-spacing: 3px;
+	}
+	.head_text .h1 {
+		font-size: 19px;
+		letter-spacing: 2px;
+	}
+	.head_text .line {
+		margin-bottom: 56px;
+		margin-top: 10px;
+		width: 225px;
+	}
+	.head_text a {
+		font-size: 14px;
+		padding: 25px 35px;
+	}
+	.logo .top {
+		font-size: 15px;
+	}
+	.logo .name, .logo .name2 {
+		font-size: 21px;
+		letter-spacing: 4px;
+	}
+	.top_phone .icon {
+		display: none;
+	}
+	.top_phone {
+		margin-left: 10px;
+		padding-top: 7px;
+		padding-bottom: 0px;
+	}
+	.top_phone .phone {
+		font-size: 17px;
+		bottom: 2px;
+		line-height: 17px;
+		margin-left: 0px;
+	}
+	.main_info_bg .background {
+		height: 400px;
+	}
+	.main_menu ul {
+		top: 126px;
+	}
+	.main_menu ul li {
+		font-size: 24px;
+		line-height: 71px;
+	}
+	.main_menu ul li ul li {
+		font-size: 18px;
+		letter-spacing: 3px;
+	}
+	.main_menu ul li ul li a {
+		line-height: 52px;
+	}
+	.zobacz {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+	.zobacz a {
+		font-size: 17px;
+		padding: 27px 55px;
+	}
+	.choise a {
+		padding: 23px 70px;
+	}
+	.section_header h2 {
+		font-size: 30px;
+		letter-spacing: 3px;
+	}
+	.uslugi_number {
+		font-size: 53px;
+	}
+	.uslugi_name {
+		font-size: 17px;
+		line-height: 19px;
+	}
+	.uslugi_item {
+		padding-bottom: 10px;
+	}
+	.realization .section_header h2 {
+		font-size: 33px;
+		letter-spacing: 2px;
+		line-height: 40px;
+		margin-bottom: 6px;
+	}
+	.realization h3 {
+		font-size: 20px;
+		margin-bottom: 14px;
+	}
+	.choise p {
+		margin-bottom: 12px;
+		line-height: 17px;
+		font-size: 13px;
+	}
+	.choise .oferta {
+		margin-top: 31px;
+	}
+	.contact {
+		margin-top: 40px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.contact .reg {
+		font-size: 16px;
+		line-height: 19px;
+		margin-bottom: 14px;
+	}
+	.contact .contact_p {
+		font-size: 16px;
+		margin-bottom: 14px;
+	}
+	.footer_menu ul li {
+		width: 110px;
+	}
+	.otstup {
+		margin-bottom: 30px;
+	}
+	.copy p {
+		line-height: 14px;
+	}
+	.navBtn {
+		top: 16%;
+		font-size: 86px;
+	}
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px) {
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+	.main_menu {
+		display: block !important;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+
+}
