@@ -669,7 +669,7 @@ section .descr_wrap .section_descr:after {
   outline: none;
 }
 
-.portfolio_description h3 a:hover {
+.portfolio_description a:hover {
   color: #F54400;
 }
 
