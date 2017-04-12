@@ -20,18 +20,18 @@
 		<div class="slider fade">
 			<img src="img/pic_mini_3.png" alt="">
 		</div>
-		<a class="prev">&lt;</a>
-		<a class="next">></a>
+		<a  class="prev" onclick="plusSlide(-1)">&lang;</a>
+		<a class="next" onclick="plusSlide(1)">&rang;</a>
 	</div>
 	
 
 	<div class="images">
-		<img class="mini" src="img/pic_mini_1.png" alt="">
-		<img class="mini" src="img/pic_mini_2.png" alt="">
-		<img class="mini" src="img/pic_mini_3.png" alt="">
+		<img class="mini" onclick="current(1)" src="img/pic_mini_1.png" alt="">
+		<img class="mini" onclick="current(2)" src="img/pic_mini_2.png" alt="">
+		<img class="mini" onclick="current(3)" src="img/pic_mini_3.png" alt="">
 	</div>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 	<script src="js/slider_jquery.js"></script>
 </body>
 </html>
