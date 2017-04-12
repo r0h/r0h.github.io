@@ -518,6 +518,7 @@ section .descr_wrap .section_descr:after {
 .section_portfolio .portfolio_block .portfolio_item img {
   max-width: 100%;
   border: 1px solid #000;
+  width: 100%;
 }
 
 .section_portfolio .portfolio_block .portfolio_item .portfolio_hover {

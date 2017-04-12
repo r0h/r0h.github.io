@@ -51,6 +51,12 @@
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
+	.section_portfolio .portfolio_block .portfolio_item h3 {
+		margin: 6% 0;
+	}
+	.section_portfolio .portfolio_block .portfolio_item p {
+		margin: 6% 0;
+	}
 
 }
 
