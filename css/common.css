@@ -266,7 +266,7 @@ section .descr_wrap .section_descr:after {
   background-image: url("../img/preload.gif");
   background-size: cover;
   background-repeat: no-repeat;
-  background-posirion: center center;
+  background-position: center center;
   background-color: #fff;
   height: 64px;
   width: 64px;
