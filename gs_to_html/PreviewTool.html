@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html style="background-color: #fff">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>
+    <style>
+.table_for_copy_outerhtml{padding-bottom: 50px;}
+.buttons{text-align: center;}
+.Filters{display:-webkit-box;display:flex}.Filters-item{-webkit-box-flex:1;flex-grow:1;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;background-color:#dfded7;color:#231f20;padding:15px}.Filters-item:first-child{background-color:#cfcdc2}.Filters-item:not(:last-child){margin-right:1px}.Filters-item--heading{text-transform:uppercase}.Filters-item--submit{-webkit-box-pack:center;justify-content:center}.Filter{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}.Filter-title{flex-shrink:0;margin-right:5px;font-weight: bold;}.Filter-content{-webkit-box-flex:1;flex-grow:1}.Filter-content--perfomance input,.Filter-content--perfomance select{text-align:center;max-width:100px;cursor:pointer}.InputIcon{position:relative}.InputIcon-icon{position:absolute;right:0;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);pointer-events:none}.ReportingMain{max-width:620px;margin:0 auto;display:-webkit-box;display:flex;-webkit-box-pack:justify;justify-content:space-between;position:relative}.ReportingMain-item{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center;width:33.333%;align-self:flex-start}.ReportingMain-item:not(:last-child){margin-right:20px}.BigInfo{padding-top:50px;padding-bottom:50px;position:relative}.BigInfo-bubbleTop{top:0}.BigInfo-bubbleLeft{-webkit-transform:translateX(-95%);transform:translateX(-95%);bottom:0;z-index:1}.BigInfo-bubbleRight{-webkit-transform:translateX(-5%);transform:translateX(-5%);bottom:0}.BigInfo-bubbleCenter{bottom:0}.Bubble{width:84px;height:84px;border-radius:50%;color:#fff}.Bubble--blue{background-color:rgba(9,136,175,0.85)}.Bubble--darkBlue{background-color:rgba(7,72,92,0.85)}.Bubble--pink{background-color:rgba(223,22,120,0.85)}.Bubble-text{max-width:100%;text-align:center}.Bubble-title{text-transform:uppercase}.Statistics{width:100%}.Statistics .InfoBlock{margin-bottom:10px}.LineHeading{position:relative;text-align:center;margin-bottom:5px}.LineHeading:before{content:'';position:absolute;background-color:#a9a791;height:1px;width:100%;top:50%;z-index:-1;left:0}.LineHeading-text{color:#0e88af;text-transform:uppercase;background:#f7f6f5;padding:0 5px;font-weight:700}.InfoBlock-top{background-color:#0e88af;text-transform:uppercase;color:#fff;text-align:center;padding:5px}.InfoBlock-bottom{background-color:#fff;color:#231f20}.InfoBlock--standard .InfoBlock-bottom{display:-webkit-box;display:flex;justify-content:space-around;padding:5px}.InfoBlock--bordered .InfoBlock-bottom{*zoom:1}.InfoBlock--bordered .InfoBlock-bottom:before,.InfoBlock--bordered .InfoBlock-bottom:after{content:'';display:table}.InfoBlock--bordered .InfoBlock-bottom:after{clear:both}.InfoBlock--bordered .InfoBlock-bottom>*{*zoom:1;float:left;clear:none;text-align:inherit;width:50%;margin-left:0;margin-right:0;padding:5px;text-align:center}.InfoBlock--bordered .InfoBlock-bottom>*:before,.InfoBlock--bordered .InfoBlock-bottom>*:after{content:'';display:table}.InfoBlock--bordered .InfoBlock-bottom>*:after{clear:both}.InfoBlock--bordered .InfoBlock-bottom>*:first-child{position:relative;border-right:1px solid #0e88af}.InfoBlock .fa-long-arrow-up{color:#008000}.InfoBlock .fa-long-arrow-down{color:#f00}.ArrowIcon{background-color:#cfcdc2;width:20px;height:20px;border-radius:50%;display:-webkit-inline-box;display:inline-flex;-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center;color:#fff;font-weight:700}.Reports{margin-bottom:50px;*zoom:1}.Reports:before,.Reports:after{content:'';display:table}.Reports:after{clear:both}.Reports-col:nth-child(1){*zoom:1;float:left;clear:none;text-align:inherit;width:38.2%;margin-left:0;margin-right:3%}.Reports-col:nth-child(1):before,.Reports-col:nth-child(1):after{content:'';display:table}.Reports-col:nth-child(1):after{clear:both}.Reports-col:nth-child(1):last-child{margin-right:0}.Reports-col:nth-child(2){*zoom:1;float:left;clear:none;text-align:inherit;width:58.8%;margin-left:0;margin-right:3%}.Reports-col:nth-child(2):before,.Reports-col:nth-child(2):after{content:'';display:table}.Reports-col:nth-child(2):after{clear:both}.Reports-col:nth-child(2):last-child{margin-right:0}.Report-summaries{*zoom:1;margin-bottom:20px}.Report-summaries:before,.Report-summaries:after{content:'';display:table}.Report-summaries:after{clear:both}.Report--three .Report-col{*zoom:1;float:left;clear:none;text-align:inherit;width:31.33333333333333%;margin-left:0;margin-right:3%}.Report--three .Report-col:before,.Report--three .Report-col:after{content:'';display:table}.Report--three .Report-col:after{clear:both}.Report--three .Report-col:last-child{margin-right:0}.Report--four .Report-col{*zoom:1;float:left;clear:none;text-align:inherit;width:22.75%;margin-left:0;margin-right:3%}.Report--four .Report-col:before,.Report--four .Report-col:after{content:'';display:table}.Report--four .Report-col:after{clear:both}.Report--four .Report-col:last-child{margin-right:0}.Filters{display:-webkit-box;display:flex}.Filters-item--perfomance{display:inline-block;-webkit-box-flex:0;flex-grow:0;height:40px;line-height:41px;padding:0 11px;font-size:10px}.Filters-item--perfomance:nth-child(5) select{padding:0 0 0 15px;-webkit-padding-start:20px}.Filters-item--perfomance:first-child{font-size:14px}.Filters-item--perfomance button{background-color:#df1678;text-transform:uppercase;border:none;color:#fff;font-size:11px;transition:all 0.3s ease;height:19px;line-height:18px;padding:0 11px;border-top:1px solid #df1678;-webkit-appearance:none;-moz-appearance:none;margin-top:11.5px;position:relative;top:-0.75px}.Filters-item--perfomance button:hover{background-color:#c80061}.Filters-item--perfomance button:focus{outline:none}.Filters-item--perfomance button:active{opacity:0.7}.Filters-perfomance{-webkit-box-align:center;align-items:center;-webkit-box-pack:center;justify-content:center}.Filter-content--perfomance input,.Filter-content--perfomance select{text-align:center;max-width:100px;cursor:pointer;-webkit-box-flex:0;flex-grow:0;height:19px;font-size:12px;font-weight:500}.Filter-content--perfomance input{border:none;padding-right:12px;background:#fff;border-radius:0}.Filter-content--perfomance select{-webkit-appearance:none;-moz-appearance:none;line-height:14px;width:100px;border:1px solid #aeaead;padding:0 0 0 20px;-webkit-padding-start:24px;-ms-text-align-last:left;text-align-last:left;text-align:left;background:#fff;border-radius:0}.Filter-content--perfomance select option{text-align:center;text-align-last:center;font-weight:500}.Filter-content--perfomance .top_carret{position:absolute;right:14px;top:11px;font-size:12px;pointer-events:none;z-index:3;transition:z-index 0.2s linear}.Filter-content--perfomance .top_carret:nth-child(2){top:17px}.drop_down_filter{line-height:14px;width:100px;position:relative;height:19px}.drop_down_filter span{text-align:center;width:100%;position:relative;display:inline-block;background:#fff;height:100%;line-height:18px;padding-right:8px;border:1px solid #939393;font-size:12px;cursor:pointer;font-weight:500;border-radius:2px;z-index:1;position:relative;top:0}.drop_down_filter ul{display:none;padding:0;position:absolute;background:#fff;z-index:3;border:1px solid #939393;border-radius:2px;box-shadow:1px -1px 3px #939393;font-size:12px;font-weight:500;margin-bottom:0;top: 7px;padding:2px 0;transition:all 0.5s ease;width: 307px;left: -100px}.drop_down_filter ul li{list-style-type:none;cursor:pointer;line-height:16px;z-index:-1;transition:all 0.3s ease;text-align:center;padding-right:8px;padding-left:8px}.drop_down_filter ul li:hover{background-color:#3c85aa;color:#fff}.drop_down_filter ul i{font-style:normal;font-weight:normal;text-decoration:inherit;position:absolute;left:3px;font-size:11px;padding-top:2px;color:#3a3944;opacity:1 !important}.new_perf_info .container{margin-top:15px}.new_perf_info .row .no_p:nth-child(1){padding-left:92px}.new_perf_info .row .no_p:nth-child(2){padding-right:92px;margin-top:0}.new_perf_info .row .no_pl{padding:0;width:initial}.new_perf_info .wrapper_iphone .DevPerf-col{width:96px;display:inline-block;margin-right:5px}.new_perf_info .wrapper_iphone:nth-child(2) .DevPerf-col:nth-child(2){margin-right:0}.new_perf_info .wrapper_iphone .InfoBlock-bottomLeft{width:100%;border-right:none}.new_perf_info .wrap{text-align:center}.new_perf_info .wrap .delivery{color:#0e88af;font-size:16px;font-weight:bold;text-transform:uppercase;margin-bottom:5px}.new_perf_info .wrap .delivery .line{width:411px;height:1px;position:absolute;top:10px;background-color:#a9a791;left:-1px;z-index:-1;right:0;margin:0 auto}.new_perf_info .wrap .delivery .name{z-index:2;background-color:#f7f6f5;padding:0 5px}.Filters-item--perfomance .Filter-content--perfomance:hover i{opacity:0.7}.no_p{padding:0}.wrapper_iphone{display:inline-block}.new_perf_info .InfoBlock-top,.new_perf_info .InfoBlock-bottom{line-height:16px;font-size:12px;font-weight:600;box-shadow:4px 2px 4px rgba(0,0,0,0.1)}.select{width:907px;background-color:#dfded7;height:51px;margin:0 auto;margin-top:21px;border-radius:5px;padding-bottom:0}.select .left,.select .right,.select .first_measure,.select .second_measure{display:inline-block}.select .left{border-right:1px solid #f7f6f5;width:395px;text-align:right}.select .left .title_section{font-family:'Raleway',sans-serif;font-size:16px;font-weight:bold;color:#0e88af;text-transform:uppercase;line-height:51px;display:inline-block;padding:0 25px}.select .right{height:51px}.select .right .first_measure{margin-left:15px}.select .right .first_measure:hover .carrets{opacity:0.7}.select .right .second_measure:hover .carrets{opacity:0.7}.select .right .first_measure,.select .right .second_measure{margin-left:12px;height:17px;color:#000;font-weight:bold;position:relative;margin-bottom:0}.select .right .first_measure .carrets,.select .right .second_measure .carrets{position:absolute;right:3px;top:0;font-size:16px;pointer-events:none;z-index:2;transition:z-index 0.2s linear}.select .right .first_measure .carrets:nth-child(2),.select .right .second_measure .carrets:nth-child(2){top:8px}.select .right .first_measure option,.select .right .second_measure option{text-align-last:center;text-align:center;color:#000;font-weight:500;margin:0 auto}.select .right .first_measure .name,.select .right .second_measure .name{display:inline-block;font-family:'Raleway',sans-serif;font-size:15px;padding:0.5px 8px 0 8px;color:#fff;float:left;height:25px;line-height:25px}.select .right .first_measure .name{background-color:#f47844}.select .right .measure{display:inline-block;height:25px;font-size:12px;width:140px;text-transform:uppercase;cursor:pointer;float:left;border-radius:0;font-weight:500}.select .right .drop_down_filter{line-height:20px}.select .right .drop_down_filter span{line-height:25px;text-align:center;padding-right:10px}.select .right .drop_down_filter ul{top:0;padding:5px 0}.select .right .drop_down_filter ul i{font-style:normal;font-weight:normal;text-decoration:inherit;position:absolute;left:22px;font-size:13px;padding-top:2px;color:#3a3944;opacity:1 !important}.select .right .drop_down_filter ul li{padding-right:10px;padding-left:0}.select .right .second_measure{text-align:center}.select .right .second_measure ul i{left:20px}.select .right .second_measure .name{background-color:#4791c1}.select_centered{margin:0 auto;text-align:center}.select_centered .select_option{text-align:center}.volume_section .container{margin-top:0;position:relative}.volume_section .container .wrap{background-color:#fff;margin:0 117px;border-top-left-radius:4px;border-top-right-radius:4px;text-align:center;margin-bottom:-14px}.volume_section .container .wrap .delivery{padding-top:20px;margin-bottom:10px}.volume_section .container .wrap .delivery .name{font-size:16px;font-weight:bold;text-transform:uppercase;color:#4791c1;background-color:#fff;z-index:1;position:relative;padding:0 5px}.volume_section .container .wrap .delivery .line{background-color:#a9a791;height:1px;width:738px;position:absolute;left:0;right:0;top:30px;z-index:0;margin:0 auto}.volume_section .container .wrap .chart_title,.volume_section .container .wrap .charts_title{color:#000;font-size:10.5px;font-family:'Raleway',sans-serif;font-weight:600;margin-bottom:20px}
+  
+  html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}body{font-size:16px;font-weight:500;background-color:#f7f6f5}.BodyStart{height:100vh;background:#0988af}.ContainerOuter{display:-webkit-box;display:flex;-webkit-box-pack:center;justify-content:center}.ContainerOuter--blue{background:#0988af;margin-bottom:0px}.Container{width:960px}.Page{width:960px;margin:20px auto}.Page-section{margin-top:30px;margin-bottom:30px}.Heading1{font-size:26px;font-weight:300;color:#0988af;margin-bottom:2em}.SubtleLink{color:#98c3d5;font-size:12px;text-decoration:none}.Form{width:100%}.Form-row{margin-bottom:20px;text-align:center}.Form-row--largeSpaceTop{margin-top:30px}.HelpBlock{font-size:13px;color:#bcbec0}.Button{border:0;outline:0;background:#df1678;color:#fff;text-transform:uppercase;font-size:14px;padding:10px;display:inline-block}.Button:focus,.Button:hover{text-decoration:none}.Button--grey{background-color:#bcbec0}.Button--wider{padding:10px 50px}.Button--small{padding:5px;font-size:11px}.Button--small2{padding:5px 25px;font-size:13px}.Button--fullWidth{width:100%;text-align:center}.new_dropdown .Button{background-color:#bcbbbc}.new_dropdown .Button:hover{background-color:#df1678;color:#fff}.new_dropdown .Button--blue{background-color:#07485c}.InputText,.InputNoBorders{border:none;outline:0}.InputText{border:none;height:43px;line-height:43px;border:1px solid #bcbec0;width:100%;padding:0 10px}.InputText:focus{border:1px solid #df1678}.InputText::-webkit-input-placeholder{font-size:12px;color:#bcbec0}.InputText:-ms-input-placeholder{font-size:12px;color:#bcbec0}.InputText::placeholder{font-size:12px;color:#bcbec0}.InputNoBorders{border-bottom:1px solid #e2e2e2;width:100%;padding:5px 0}.InputNoBorders:focus{border-bottom:1px solid #df1678}.InputNoBorders::-webkit-input-placeholder{font-size:12px;color:#0988af;text-transform:uppercase}.InputNoBorders:-ms-input-placeholder{font-size:12px;color:#0988af;text-transform:uppercase}.InputNoBorders::placeholder{font-size:12px;color:#0988af;text-transform:uppercase}
+
+  .MainNav{height:140px;display:-webkit-box;display:flex;position:relative;z-index:4}.MainNav-left{display:-webkit-box;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;flex-direction:column;-webkit-box-align:center;align-items:center}.MainNav-left .SiteName{margin-bottom:10px}.MainNav-middle{margin-left:20px}.MainNav-middle .Circle{position:absolute;bottom:-21px}.MainNav-right{-webkit-box-flex:1;flex:1 1 auto;display:-webkit-box;display:flex;-webkit-box-pack:end;justify-content:flex-end;-webkit-box-align:start;align-items:flex-start;margin-top:4px}.MainNav-rightInside{min-width:100px}.MainNav-rightInside .ProfileDropdown{margin-bottom:20px}.MainNav-rightInside .ProfileDropdown .dropdown-menu-right{z-index:3}.MainNav-circles{position:absolute;bottom:-26px;right:0;display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center}.MainNav-circles .Circle,.MainNav-circles .CircleBigger{margin:0 5px}.SiteName{margin:0;padding:10px;text-transform:uppercase;color:#fff;background:#07485c;font-size:15px}.SiteName a{color:inherit}.SiteName a:hover{text-decoration:none}.Nav{font-size:13px;display:-webkit-box;display:flex}.Nav-item{padding:0px 10px;color:#07485c;padding-top: 10px;}.Nav-item:first-child{padding-left:0}.Nav-item.is-active,.Nav-item:hover{text-decoration:none;color:#fff}.TitleEditable{width:300px}.TitleEditable-text{color:#fff}.ProfileDropdown{display:block;position:relative}.ProfileDropdown-title{text-shadow:none !important}.ProfileDropdown-title:hover,.ProfileDropdown-title:focus{text-decoration:none;color:#fff}.ProfileDropdown-caret{-webkit-transform:scale(1.1);transform:scale(1.1);margin-left:5px}.ProfileDropdown.nav .open > a,.ProfileDropdown.nav .open > a:hover,.ProfileDropdown.nav .open > a:focus{background-color:transparent}.ProfileDropdown-dropdown{margin:0;padding:10px;-webkit-transform:translateY(10px);transform:translateY(10px);min-width:239px;border:none;left:0;right:auto;padding-top:14px;padding-right:20px}.ProfileDropdown-title,.Nav{color:#07485c;font-family:Raleway;font-size:12px;font-weight:500;line-height:20px;margin-bottom:7px}.DropdownContent{display:-webkit-box;display:flex;padding-bottom:7px;max-width:250px}.DropdownContent-right{-webkit-box-flex:1;flex:1 1 auto;margin-left:10px;min-width:0;padding-top:8px}.DropdownContent-image{position:relative}.DropdownContent-image:hover{cursor:pointer}.DropdownContent-image:hover:before{content:'Update photo';position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);font-size:11px;text-transform:uppercase;z-index:2;color:#fff;text-align:center}.DropdownContent-image:hover:after{content:'';display:block;background-color:#df1678;top:0;right:0;left:0;bottom:0;z-index:1;border-radius:50%;position:absolute;opacity:0.5}.DropdownContent-image img{border-radius:50%}.DropdownContent-name{color:#0988af;font-size:14px;font-weight:500;line-height:20px}.DropdownContent-email{font-size:11px;color:#0988af;margin-bottom:23px;font-weight:300}.DropdownContent .Button{margin-bottom:5px}.Circle{position:relative;border-radius:50%;height:46px;width:46px;cursor:pointer}.Circle-inside{height:26px;width:26px;border-radius:50%;font-size:11px;color:#000;line-height:26px;text-align:center;font-weight:200}.Circle--color .Circle-inside{box-shadow:0 0 2px rgba(255,255,255,0.7)}.Circle--blue{background-color:#07485c}.Circle--blue:hover{background-color:#df1678}.Circle--blue .Circle-inside{color:#fff}.Circle--smaller{height:42px;width:42px}.Circle--smaller .Circle-inside{height:24px;width:24px}.Circle--bigger{height:52px;width:52px}.Circle--bigger .Circle-inside{border:2px dashed #fff;height:32px;width:32px;line-height:28px;font-size:34px}.Circle--bigText .Circle-inside{font-size:50px;font-weight:200}.SearchForm{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;width:250px}.SearchForm-label{cursor:pointer}.SearchForm:hover .InputLarge,.SearchForm .InputLarge:focus{opacity:1}.SearchForm .InputLarge{margin-left:10px;opacity:0;position:relative;top:-9px}.TitleWithDropdown{position:relative}.TitleWithDropdown-title{color:#fff;cursor:pointer}.TitleWithDropdown-dropdown{display:none;position:absolute;z-index:1}.TitleWithDropdown.is-active .TitleWithDropdown-dropdown{display:block}.Dropdown{background-color:#fff;width:240px;padding:$spaceSX}.Dropdown-row{display:-webkit-box;display:flex;-webkit-box-align:center;align-items:center;padding-bottom:$spaceSX}.Dropdown-row:last-child{padding-bottom:0}.Dropdown-item{color:#bcbec0}.Dropdown-item:first-child{padding-right:10px}
+  .Filters-item button{text-transform: uppercase;line-height: 19px;font-size: 12px !important;font-weight: bold;}
+  .Filters-item button:hover{background-color: #db1374 !important; }
+  #result_to_copy{position: relative;top: 20px;}
+  .arrow_png:hover {opacity: .8;}
+  .top_ch_next {padding-right: 28px !important;}
+  .MainNav-middle {width: 74%;}
+    </style>
+	</head>
+	<body style="background-color: #fff;margin: 0; ">
+    <div class="ContainerOuter ContainerOuter--blue">
+  <div class="Container">
+    <nav class="MainNav">
+      <div class="MainNav-left">
+        <h2 class="SiteName"><a href="http://platform.fast-thinking.co.uk/" style="outline: none;text-decoration: none;font-weight: 400;" >Fast Thinking</a></h2>
+        <a href="http://platform.fast-thinking.co.uk/" style="outline: none;text-decoration: none;" ><img src="http://platform.fast-thinking.co.uk/img/logo_white.png" alt="Fast Thinking"></a>
+      </div>
+      <div class="MainNav-middle">
+      	<nav class="Nav" style="margin-bottom: 34px;">
+      		<a href="https://docs.google.com/spreadsheets/d/1Z1WUzQLfO_5c_lDr0Sum5k0kJCurYS_Fq4-lvuQMMmo/edit#gid=1421096052" class="Nav-item" target="_blank" style="text-decoration: none;">Manage Content</a>
+      	</nav>
+      	<div class="TitleEditable" style="margin: 0 auto;">
+      		<div class="title" style="font-family: 'Raleway', sans-serif;font-size: 32px;font-weight: 100;line-height: 20px;color: #fff;">Email Preview Tool</div>
+      	</div>
+      </div>
+    </nav>
+  </div>
+</div>
+<textarea id="copy_to_clipboard" class="outerHTML" rows="1" cols="1" style="margin: 0 auto;position: relative;left: 0;right: 0;display: block;opacity: 0;background-color: #eff1f3;">
+		</textarea> 
+		<div class="table_container" style="display: none;"></div>
+		<div class="settings_container" style="display: none;"></div>
+    <div class="dropdown_titles" style="display: none;"></div>
+    <section class="new_perf_filters" style="margin-bottom: 20px;margin-top: 24px; ">
+  <div class="container new_perfomance">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+        <div class="Filters Filters-perfomance">
+          <div class="col-sm-12 col-xs-12 Filters-item Filters-item--heading Filters-item--perfomance" style="font-size: 13px;font-weight: bold;">Preview Filters</div>
+          <div class="col-sm-6 col-xs-12 Filters-item Filters-item--perfomance">
+            <div class="Filter">
+              <div class="Filter-title">Select Campaign</div>
+              <div class="Filter-content Filter-content--perfomance" style="position: relative; ">
+              <img class="arrow_png" src="https://cdn3.iconfinder.com/data/icons/pyconic-icons-2-1/512/arrow-double-up-down-512.png" alt="" style="position: absolute;right: 0;z-index: 2;width: 13px; top: 2px;" />
+                <div class="activity drop_down_filter" id="activity">
+                  <span style="padding-right: 0px;"></span>
+                  <ul>
+              <li></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xs-12 Filters-item Filters-item--perfomance">
+            <div class="Filter">
+              <div class="Filter-title">Select Row</div>
+              <div class="Filter-content Filter-content--perfomance">
+                <i class="fa fa-caret-up top_carret" aria-hidden="true"></i>
+                <i class="fa fa-caret-down top_carret" aria-hidden="true"></i>
+                <div class="audience drop_down_filter" id="audience">
+                  <input type="text" id="number_of_row" style="border: 1px solid #939393;border-radius: 2px;position: relative;padding-right: 0px;max-width: 103px;" placeholder="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-xs-12 Filters-item Filters-item--perfomance">
+            <button class="compile Filters-item Filters-item--perfomance" style="background-color: #df1678;cursor: pointer; ">Preview Email</button>
+          </div>
+          <div class="col-sm-12 col-xs-12 Filters-item Filters-item--perfomance">
+            <button class="btn-clipboard Filters-item Filters-item--perfomance" data-clipboard-target="#copy_to_clipboard" style="background-color: #df1678;cursor: pointer;">Copy To Clipboard</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <div class="buttons">
+		
+    
+</div>
+		<div class="result" id="result_to_copy">
+  
+
+<!-- <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head> -->
+ <title>Viking River Cruises</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="robots" content="noindex" />
+ <meta name=”x-apple-disable-message-reformatting”>
+<style>
+  .ReadMsgBody{width:100%}
+.ExternalClass{width:100%}
+.outlook_hidden{display:inline-table!important;max-height:none!important}
+.olen_img{width:54%!important}
+.olen_img img{width:100%!important;height:initial}
+body,table,tr,td,br,strong,span,a,img{mso-line-height-rule:exactly;line-height:normal;font-family:Arial,Verdana,sans-serif;border-collapse:collapse;-webkit-text-size-adjust:none}
+table td{border-collapse:collapse}
+.width_350 {width: 350px !important;}
+#video_link{width: 315px !important;height: 157px !important;}
+@media only screen and (max-width: 673px) {
+.cr_vid{max-width:641px!important}
+.cr_vid,.cr_vid_100{width:100%!important;padding-left:0!important}
+.cr_disc_pad{text-align:center!important;padding:0 15px!important;height:initial!important}
+.cr_vid,.cr_vid_100{height:initial!important}
+.over_vid{height:545px!important}
+.labels_tab_pb{padding-bottom:5px!important}
+.cr_disc_pad{max-height:55px!important}
+.wrapper_table{width:100%!important}
+.video_image_td{width: 100% !important}
+}
+@media only screen and (max-width: 670px) {
+.cr_over{width:100%!important;height:170px!important;max-width:641px!important}
+th.video_img{width:100%!important;display:block!important}
+table.cr_vid{padding-right:0!important;padding-bottom:10px!important}
+th.top_ch{display:inline-block!important;width:100%!important;padding-left:0!important;padding-right:0!important;padding-bottom:0!important}
+th.fd_more_pr_1{width:100%!important;padding-bottom:10px!important}
+th.fd_more,th.fd_more span{text-align:center!important}
+th.fd_more,th.fd_more_pr{display:block!important}
+th.fd_more_pr{padding-left:0!important;padding-right:0!important}
+th.top_ch_next{padding-top:5px!important;padding-bottom:5px!important}
+tr.to_ch_inside{display:inline-block!important}
+tr.to_ch_inside h3{margin-top:5px!important;margin-bottom:5px!important}
+th.bt_icons{width:50%!important}
+}
+@media only screen and (max-width: 668px) {
+.labels_top{height:149px!important;min-height:149px!important}
+.label_w100{width:100%!important}
+}
+@media only screen and (max-width: 650px) {
+.video_img{width:100%!important}
+.cr_disc_pad{padding:0 5px!important}
+}
+@media only screen and (max-width: 640px) {
+.lf_button_find_inside{width:100%!important;max-width:100%!important;display:block!important;text-align:center}
+.lf_button_find{width:100%!important;max-width:100%!important;display:block!important;text-align:center!important;height:55px!important}
+.button_find{width:100%!important;max-width:100%!important;display:block!important}
+.button_find_td{text-align:center!important;width:100%}
+.w100_570{text-align:center!important;width:100%!important;display:table-cell!important}
+.lf_button_find_td{width:100%!important;text-align:center!important}
+.w1{width:1px!important}
+.w100_570{text-align:center!important;width:100%!important;display:table-cell!important}
+}
+@media only screen and (max-width: 630px) {
+.hidden_550{display:none!important;width:0!important}
+.exclusive{width:100%!important;max-width:100%!important;height:60px!important}
+.exclusive_2{width:100%!important;max-width:100%!important;height:5px!important}
+.exclusive_2 span{display:inline-block!important}
+.exc2{height:25px!important}
+}
+@media only screen and (max-width: 602px) {
+.lf_button_find{width:100%!important;max-width:100%!important;display:block!important;text-align:center!important;height:55px!important}
+.button_find{width:100%!important;max-width:100%!important;display:block!important}
+.button_find_td{text-align:center!important;width:100%}
+.w100_570{text-align:center!important;width:100%!important;display:table-cell!important}
+.lf_button_find_td{width:100%!important;text-align:center!important}
+.cr_disc_pad{max-height:41px!important}
+.over_vid{height:545px!important}
+}
+@media only screen and (max-width: 600px) {
+.cr_vid,.cr_over,.cr_vid_100{width:100%!important}
+.cr_disc_pad{text-align:center!important;padding:0 15px!important;height:initial!important}
+.cr_over{height:210px!important}
+.cr_vid,.cr_vid_100{height:initial!important}
+.btn_bd{border-radius:1px!important}
+.lf_button_find_inside{width:100%!important;max-width:100%!important;display:block!important;text-align:center}
+.lf_button_find_td{width:100%!important;text-align:center!important}
+}
+@media only screen and (max-width: 602px) {
+.lf_button_find{width:100%!important;max-width:100%!important;display:block!important;text-align:center;height:55px!important}
+.button_find{width:100%!important;max-width:100%!important;display:block}
+.lf_button_find_inside{width:100%!important;max-width:100%!important;display:block!important;text-align:center}
+.button_find_td{text-align:center!important;width:100%}
+.lf_button_find_td{width:100%!important;text-align:center!important}
+.w1{width:1px!important}
+.w100_570{text-align:center!important;width:100%!important;display:table-cell!important}
+.fw_100{font-weight:100!important}
+.cr_over,.cr_disc,.labels_tab{width:100%!important}
+}
+@media only screen and (max-width: 575px) {
+.hidden_570{width:19px!important}
+}
+@media only screen and (max-width: 570px) {
+.hidden_570{display:none!important}
+}
+@media only screen and (max-width: 550px) {
+.hidden_550{display:none!important;width:0!important}
+.exclusive{width:100%!important;max-width:100%!important;height:60px!important}
+.exclusive_2{width:100%!important;max-width:100%!important;height:5px!important}
+.exclusive_2 span{display:inline-block!important}
+.exc2{height:25px!important}
+.bf_explorer{width:15px!important;max-width:15px!important}
+.af_explorer_1{letter-spacing:-.5px;font-size:16px!important}
+.lf_button_find_inside{height:60px!important}
+.second_header{height:86px!important}
+}
+@media only screen and (max-width: 515px) {
+.cr_disc_pad{max-height:70px!important}
+}
+@media only screen and (max-width: 486px) {
+.fst_labels{width:49%!important;height:84px!important}
+.labels_tab{height:169px!important}
+.fst_labels img{width:35px!important;height:35px!important}
+.bt_header,.bt_header td{height:40px!important;vertical-align:bottom;font-size:14px!important}
+.bt_header td{height:34px!important}
+.bt_labels,.bt_labels table,.bt_labels td{vertical-align:top!important;padding-top:0!important}
+.over_vid{height:480px!important}
+.cr_over{height:210px!important}
+}
+@media only screen and (max-width: 460px) {
+[class].fl{float:left!important}
+[class].wr{display:block!important}
+[class].h{display:none!important}
+[class].cen{margin:0 auto!important}
+[class].full{width:300px!important;overflow:hidden}
+[class].pad{float:left!important;width:90%!important;padding:10px 5%}
+[class].nh{height:inherit!important}
+[class].left{text-align:left!important}
+[class].padterm{float:left!important;width:90%!important;padding:5px 5%}
+[class].contain{background-size:100%;background-position:right top}
+[class].m-image-container{width:100%!important;height:inherit!important;max-height:inherit!important;display:block!important;visibility:visible!important;margin:0;padding:0}
+[class].m-image-full{width:100%!important;height:inherit!important;display:block!important;float:left}
+[class=w50]{width:50%!important;box-shadow:inset 0 0 2px #ddd;float:left;vertical-align:middle;padding:12px 0;height:16px!important;margin:0;line-height:none!important;text-align:center!important}
+[class=w100]{width:100%!important;box-shadow:inset 0 0 2px #ddd;float:left;vertical-align:middle;padding:12px 0;height:16px!important;margin:0;line-height:none!important;text-align:center!important}
+[class=w50-2line]{width:50%!important;box-shadow:inset 0 0 2px #d6d6d6;float:left;vertical-align:middle;padding:7px 0 5px;height:30px!important;margin:0;line-height:none!important}
+[class].w264{width:264px!important}
+[class].pad-bot{padding:0 0 10px}
+[class].hero-height{margin-top:260px}
+[class].w160{width:180px!important}
+[class].pad-box{float:left!important;width:80%!important;margin:95px 5% 0;padding:10px 5%}
+[class].pad-box-2{float:left!important;width:100%!important;margin:5px 5% 0;padding:10px 5%}
+[class].borderbot{border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#ededed}
+[class].pad3{padding-bottom:3px}
+.phone{display:none}
+.media_width{width:23px}
+.fl_right img{float:right}
+.bf_explorer{width:15px!important;max-width:15px!important}
+.af_explorer{width:226px!important;max-width:226px!important}
+.explorer{width:252px!important;max-width:252px!important}
+.valid{width:200px!important;max-width:200px!important}
+.cr_vid,.cr_vid_100{height:250px!important}
+#mb_center,#mb_center_2{text-align:center;width:100%!important}
+#mb_center img,#mb_center_2 img{text-align:center;display:inline-block!important}
+.fl_right a{width:22px!important;height:17px!important;padding:10px}
+.bottom_tel{width:22px!important;height:17px!important;padding:2px 4px}
+}
+@media only screen and (max-width: 440px) {
+.cr_disc_pad{max-height:55px!important}
+}
+@media only screen and (max-width: 415px) {
+.cr_disc_pad{max-height:82px!important}
+}
+@media only screen and (max-width: 378px) {
+.over_vid{height:461px!important}
+.cr_disc_pad{max-height:96px!important}
+}
+@media only screen and (max-width: 373px) {
+.logo_top{width:208px!important}
+.media_width{width:10px!important}
+}
+@media only screen and (max-width: 360px) {
+.lf_button_find{height:initial!important}
+}
+ </style>
+ <!--[if gt mso 9]>
+     <style type="text/css" media="all">
+     /* Outlook 2016 Height Fix */
+     table, tr, td {border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;}
+     tr { font-size:0px; line-height:0px; border-collapse: collapse; }
+     table.wrapper_table{width="641px;max-width=641px"}
+     table.out_only_width {
+  width: 550px !important;
+     }
+     th.olen_img{
+  width: 315px !important;
+  height: 210px !important;
+     }
+ th.olen_img img {
+  width: 315px !important;
+  height: 210px !important;
+ }
+     </style>
+     <![endif]-->
+     <!--[if gt mso 15]>
+     <style type="text/css" media="all">
+     /* Outlook 2016 Height Fix */
+     table, tr, td {border-collapse: collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;}
+     tr { font-size:0px; line-height:0px; border-collapse: collapse; }
+     </style>
+     <![endif]-->
+     <style>
+  @media only screen {
+    html{min-height:100%;background:#f3f3f3}
+  }
+  @media only screen and (max-width:616px) {
+    table.body table.container .show-for-large{display:none!important;width:0;mso-hide:all;overflow:hidden}
+    table.body img{width:auto;height:auto}
+    table.body center{min-width:0!important}
+    table.body .column,table.body .columns{height:auto!important;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:16px!important;padding-right:16px!important}
+    table.body .column .column,table.body .column .columns,table.body .columns .column,table.body .columns .columns{padding-left:0!important;padding-right:0!important}
+    table.body .collapse .column,table.body .collapse .columns{padding-left:0!important;padding-right:0!important}
+    td.small-12,th.small-12{display:inline-block!important;width:100%!important}
+    .column td.small-12,.column th.small-12,.columns td.small-12,.columns th.small-12{display:block!important;width:100%!important}
+    .itin h3{font-size:14px}
+  }
+</style>
+<style>
+  .table_for_copy_outerhtml{background-color: #eff1f3;}
+</style>
+<custom name="opencounter" type="tracking"/>
+ <!-- </head>
+
+ <body style="background-color: #eff1f3;"> -->
+  <div style="display: none; font-size: 0px; line-height: 0px; max-height: 0px; max-width: 0px; width: 0px; opacity: 0; overflow: hidden;">0800 3196464 Exclusive Offer brought to you by the Viking Explorer Society
+  </div>
+  <table class="out_only_width table_for_copy_outerhtml" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0;" width="100%" align="center">
+   <tbody>
+    <tr>
+     <td width="1"></td>
+     <td class="out_only_width" width="100%" align="center">
+
+      <p style="Margin:0;color:#666;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:center;text-decoration:none; padding-top: 10px;padding-bottom: 10px">Email not displaying correctly? <a href="%%view_email_url%%" style="Margin:0;color:#666;font-family:Helvetica,Arial,sans-serif;font-size:9px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none;font-weight: bold">View it in your browser.<br /></a></p>
+
+      <table class="wrapper_table out_only_width" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px;" width="641" align="center">
+       <tbody>
+        <tr>
+         <td>
+         <table class="out_only_width" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; background-color: #ffffff" width="100%" height="68">
+           <tbody>
+            <tr>
+             <td class="media_width" width="27"></td>
+             <td height="68">
+              <a id="clickthrough_logo" href="logo_clickthrough" style="" target="_blank">
+               <img class="logo_top" border="0" src="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/VC_logo_horizontal.png" alt="Viking Cruises Logo" width="227" height="23" border="0" style="border:0; outline:none; text-decoration:none; display:inline-block; vertical-align: middle;"/></a>
+              </td>
+              <td class="fl_right" width="27" style="vertical-align: middle;">
+               <a class="telephone_gs_href" style="color: #333333; font-family: 'MS Sans Serif', Geneva, sans-serif; line-height: 17px; -webkit-text-size-adjust:none; display: inline-block; text-decoration: none; font-size: 17px; color: #273b51; z-index: 3; width: 27px;height: 17px;" href="PhoneNumber">
+                <img width="22" src="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/blue_phone.png" alt="0800 2989200" height="17" border="0" style="border:0; outline:none; text-decoration:none; display:block;"/></a>
+               </td>
+               <td class="phone" width="120"  style="letter-spacing: 0.5px; white-space: nowrap;line-height: 17px">
+                <a class="telephone_gs telephone_gs_href" style="color: #333333; font-family: 'MS Sans Serif', Geneva, sans-serif; line-height: 17px; -webkit-text-size-adjust:none; display: inline-block; text-decoration: none; font-size: 15px; color: #273b51;" href="PhoneNumber" alt="Call Viking"><b>PhoneNumber</b></a>
+               </td>
+               <td width="22"></td>
+              </tr>
+             </tbody>
+            </table>
+            <table class="row itin white out_only_width" style="background:#273b51;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:center;vertical-align:top;width:100%">
+             <tbody>
+              <tr style="padding:0;text-align:center;vertical-align:top">
+               <th class="small-12 large-6 columns first top_ch" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:16px;padding-left: 164px;padding-right:0px;text-align:center;width:271px;padding-top: 8px;">
+                <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:middle;width:100%">
+                 <tr style="padding:0;text-align:center;vertical-align:middle">
+                  <th style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:center;padding-bottom: 3px;">
+                   <span style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif; font-size:13px;line-height:1.3;margin:0;margin-bottom:0px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal;">Member Benefits</span></th>
+                  </tr>
+                  <tr>
+
+                   <th>
+                    <table border="0" cellpadding="0" cellspacing="0" align="center" style=" text-align:center;">
+                     <tr>
+                      <th style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:center">
+                       <span style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif; font-size:29px;line-height: 24px;line-height:1.3;margin:0;margin-bottom:0px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal;line-height: 25px;white-space: nowrap;">Exclusive Offer</span></
+                      </tr>
+                     </table>
+                    </th>
+                   </tr>
+                  </table>
+                 </th>
+                 <th class="small-12 large-6 columns last top_ch top_ch_next" valign="middle" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom: 12px;padding-left:0;padding-top: 15px;padding-right: 34px;text-align:center;width: 118px;min-width: 118px;mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;font-size: 0px;margin:0;border-spacing: 0; mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+
+                  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:middle;width:100%;mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;font-size: 0px;height: 32px;border-spacing: 0; mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                   <tr class="to_ch_inside" style="padding:0;text-align:center;vertical-align:middle;border: none;border-spacing: 0; mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                    <td style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:0px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:center;border-spacing: 0; mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
+                     <span style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif; font-size:10px;line-height:1.3;margin:0;margin-bottom:0px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal;font-style: italic;border-spacing: 0; mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">Brought To You By </span>
+                    </td>
+                   </tr>
+                   <tr class="to_ch_inside" style="">
+                    <td>
+
+                     <span style="Margin:0;Margin-bottom:10px;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif; font-size:10px;font-weight:bold;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal;border-spacing: 0; mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">The Viking Explorer Society</span>
+                    </td>
+                   </tr>
+                  </table>
+                 </th>
+                </tr>
+               </tbody>
+              </table>
+                 <a class="clickthrough" id="top_image" href="clickthrough_url" style="color: #333333; font: 10px Arial, sans-serif; -webkit-text-size-adjust:none; display: block;text-decoration: none;" target="_blank">
+                  <table class="image_block outlook_hidden out_only_width top_image_background" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px; background-size: cover;max-height: 0px;border-collapse:collapse;mso-line-height-rule: exactly; mso-margin-bottom-alt: 0; mso-margin-top-alt: 0; mso-table-lspace: 0pt; mso-table-rspace: 0pt;font-size: 14px;" width="100%" height="300" background="http://wpc.475d.edgecastcdn.net/00475D/uk/2017/Email/600x300-cesky-danube-waltz.jpg" >
+<!--[if !mso 9]>
+<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:700px;height:330px;" href="CLICKTHROUGH_URL_ADD_HERE">
+<v:fill id="top_image_outlook" type="tile" src="TOP_IMAGE_HERE" color="#ffffff" />
+<v:textbox inset="0,0,0,0">
+<div style="background-color:#fff;">
+<![endif]-->
+      <tbody>
+       <tr>
+        <td id="win_10_top_img">
+        <!--[if mso 16]>
+        <v:image xmlns:v="urn:schemas-microsoft-com:vml" id="theImage" style="behavior: url(#default#VML); position:absolute; height:330px; width:700px;mso-position-horizontal:center;mso-position-horizontal-relative:text; top:0x; z-index:-1" src="TOP_IMAGE_HERE" />
+        <![endif]-->
+         <table class="spacer show-for-large" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+          <tbody>
+            <tr style="padding:0;text-align:center;vertical-align:top">
+              <td height="19px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:19px;font-weight:400;hyphens:auto;line-height:19px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:center;vertical-align:top;word-wrap:break-word">&#xA0;</td>
+            </tr>
+          </tbody>
+        </table>
+<!--[if gte mso 9]>
+<table class="valid" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px; float: right; z-index: 2" width="600" height="43" align="right">
+  <tbody>
+    <tr>
+      <td>
+        <table class="valid" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px; float: right; z-index: 2" width="470" height="43" align="right">
+          <tbody>
+            <tr>
+              <td>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+     <td class="title" width="209" height="43" bgcolor="507991" valign="middle" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#507991;border-collapse:collapse!important;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:center;vertical-align:middle;word-wrap:break-word">
+<![endif]-->
+         <table class="valid" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px; float: right; z-index: 2; text-align: center;" width="229" height="43" align="center" background="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/bgc_right.png">
+          <tbody>
+           <tr>
+            <td>
+             <span id="call_to_action" style="color: #ffffff; font: 18px 'Trebuchet MS', Helvetica, sans-serif; line-height: 30px; -webkit-text-size-adjust:none; display: block; font-weight: 700; text-align: center; z-index: 5;opacity: 1; font-size: 18px;">call_to_action</span>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+<!--[if gte mso 9]>
+</td>
+</tr>
+</tbody>
+</table>
+<![endif]-->
+         <table class="spacer show-for-large" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+          <tbody>
+            <tr style="padding:0;text-align:center;vertical-align:top">
+              <td height="115px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:115px;font-weight:400;hyphens:auto;line-height:115px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:center;vertical-align:top;word-wrap:break-word">&#xA0;</td>
+            </tr>
+          </tbody>
+        </table>
+<!--[if gte mso 9]>
+<table class="valid" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px; float: right; z-index: 2" width="400" height="80" align="right">
+  <tbody>
+    <tr>
+     <td class="title" width="400" height="80" bgcolor="507991" valign="middle" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;background:#507991;border-collapse:collapse!important;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:auto;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:middle;word-wrap:break-word">
+<![endif]-->
+         <table class="explorer width_350" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px; z-index: 2" width="400" height="104" background="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/bgc_right.png">
+          <tbody>
+           <tr>
+            <td>
+              <table width="15" class="spacer show-for-large" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:15px;display: inline-block;">
+                <tbody>
+                  <tr style="padding:0;text-align:center;vertical-align:top">
+                  <td height="100px" width="15" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:76px;font-weight:400;hyphens:auto;line-height:76px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:center;vertical-align:top;word-wrap:break-word"></td>
+                  </tr>
+                </tbody>
+              </table>
+<!--[if gte mso 9]>
+</td><td>
+<![endif]-->
+              <table class="af_explorer" border="0" cellpadding="0" cellspacing="0" style="color: #ffffff; margin:0; padding:0; display: inline-block;" height="100" width="330px">
+                <tbody>
+                 <tr>
+                  <td height="102">
+                   <span id="itinerary_title" class="af_explorer_1" style="color: #ffffff; font: 19px 'Trebuchet MS', Helvetica, sans-serif; line-height: 25px; -webkit-text-size-adjust:none; display: block; font-weight: 700; text-align: left;">itinerary_title</span><!--[if gte mso 9]><br><![endif]-->
+                   <span id="sailing_text" class="af_explorer_2" style="color: #ffffff; font: 15px 'Trebuchet MS', Helvetica, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: inline-block; font-weight: 500; text-align: left; padding-right: 13px;"><i style="font-family: Garamond;">Sailing:</i>Sailing_text</span>
+                   <span id="duration_text" class="af_explorer_3" style="color: #ffffff; font: 15px 'Trebuchet MS', Helvetica, sans-serif; line-height: 22px; -webkit-text-size-adjust:none; display: inline-block; font-weight: 500; text-align: left;"><i style="font-family: Garamond;">Duration:</i>&nbsp;# days</span>
+                 </td>
+               </tr>
+             </tbody>
+           </table>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+<!--[if gte mso 9]>
+</td>
+</tr>
+</tbody>
+</table>
+<![endif]-->
+        <table class="spacer show-for-large" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+          <tbody>
+            <tr style="padding:0;text-align:center;vertical-align:top">
+              <td height="15px" style="-moz-hyphens:auto;-webkit-hyphens:auto;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Helvetica,Arial,sans-serif;font-size:15px;font-weight:400;hyphens:auto;line-height:15px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:center;vertical-align:top;word-wrap:break-word">&#xA0;</td>
+            </tr>
+          </tbody>
+        </table>
+        </td>
+       </tr>
+      </tbody>
+<!--[if gte mso 9]>
+</div>
+</v:textbox>
+</v:rect>
+<![endif]-->
+     </table>
+    </a>
+
+    <table class="out_only_width row itin white" border="0" cellpadding="0" cellspacing="0" style="background:#2b3d52;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:center;vertical-align:top;width:100%;font-size: 14px;outline: none;border: none;">
+     <tbody>
+      <tr style="padding:0;text-align:center;vertical-align:top">
+       <th class="small-12 large-6 columns first fd_more_pr" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;line-height:1.3;margin:0 auto;padding:0;padding-bottom:10px; padding-top:10px;padding-left:20px;padding-right:0px;text-align:center;width:384px">
+        <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+         <tr style="padding:0;text-align:center;vertical-align:top">
+          <th class="fd_more" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left">
+           <span id="es_price" style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left;word-break:break-all!important;word-wrap:normal">Explorer Society Price</span></th>
+          </tr>
+          <tr style="padding:0;text-align:center;vertical-align:top">
+           <th class="fd_more" style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left">
+            <span id="new_price" style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:15px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:left;word-break:break-all!important;word-wrap:normal">New to Viking Price</span></th>
+           </tr>
+          </table>
+         </th><th class="small-12 large-6 columns last fd_more_pr" valign="middle" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:10px; padding-top:10px;padding-left:8px;padding-right:16px;text-align:center;width:184px">
+         <table class="button_find" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 100%; background-color: #2b3d52; display: inline-block;font-size: 15px;" width="100%" height="35">
+          <tbody>
+           <tr>
+            <td width="1"></td>
+            <td class="button_find_td" height="33" width="100%">
+             <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !important;font-size: 15px" width="100%">
+              <tr>
+               <td align="center" style="font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 15px; vertical-align: top;" valign="top">
+                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;max-height: 32px;">
+                 <tr border="0" cellpadding="0" cellspacing="0">
+                  <td border="0" cellpadding="0" cellspacing="0" style="font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 16px; vertical-align: top; background-color: #cf0944; border-radius: 5px; text-align: center;" valign="top" bgcolor="#3498db" align="center">
+                   <a class="btn_bd clickthrough" id="btn_1_copy" id href="clickthrough" target="_blank" style="font-family: 'Trebuchet MS', Helvetica, sans-serif; display: inline-block; color: #ffffff; background-color: #cf0944; border: solid 1px #cf0944; border-radius: 3px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 16px; font-weight: 400; margin: 0; padding: 5px 25px; border-color: #cf0944;">Button 1 Copy</a>
+                  </td>
+                 </tr>
+                </table>
+               </td>
+              </tr>
+             </table>
+            </td>
+           </tr>
+          </tbody>
+         </table>
+        </th>
+       </tr>
+      </tbody>
+     </table>
+
+
+     <table class="row itin white out_only_width" style="background:#8da0b1;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:center;vertical-align:top;width:100%">
+      <tbody>
+       <tr style="padding:0;text-align:center;vertical-align:top">
+        <th class="small-12 large-6 columns first fd_more_pr" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0 auto;padding:0;padding-bottom:10px; padding-top:10px;padding-left:20px;padding-right:0px;text-align:center;width:384px">
+         <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+          <tr style="padding:0;text-align:center;vertical-align:top">
+           <th class="bt_icons" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left">
+            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+             <tr style="padding:0;text-align:center;vertical-align:top">
+              <th style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:center">
+
+               <img id="icon_1" src="https://assets.fast-thinking.co.uk/client-assets/viking-cruises/emails/icons/star.png" align="center" class="float-center" style="clear: both; display: block; float: none; margin: 0px auto; outline: 0px; text-align: center; text-decoration: none;" width="29" height="29" />
+              </th>
+             </tr>
+             <tr style="padding:0;text-align:center;vertical-align:top">
+              <th style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.3;margin:0;padding:0;text-align:center">
+
+               <span id="icon_1_name" style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:12px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal">USP 1</span>
+              </th>
+             </tr>
+            </table>
+           </th>
+           <th class="bt_icons" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left">
+            <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+             <tr style="padding:0;text-align:center;vertical-align:top">
+              <th style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:center">
+
+               <img id="icon_2" src="https://assets.fast-thinking.co.uk/client-assets/viking-cruises/emails/icons/star.png" align="center" class="float-center" style="clear: both; display: block; float: none; margin: 0px auto; outline: 0px; text-align: center; text-decoration: none;" width="29" height="29" />
+              </th>
+             </tr>
+             <tr style="padding:0;text-align:center;vertical-align:top">
+              <th style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.3;margin:0;padding:0;text-align:center">
+
+               <span id="icon_2_name" style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:12px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal">USP 2</span></th>
+              </tr>
+             </table>
+            </th>
+
+           </tr>
+          </table>
+         </th>
+         <th class="small-12 large-6 columns first fd_more_pr" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0 auto;padding:0;padding-bottom:10px; padding-top:10px;padding-left:20px;padding-right:0px;text-align:center;width:384px">
+          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+           <tr style="padding:0;text-align:center;vertical-align:top">
+            <th class="bt_icons" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left">
+             <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+              <tr style="padding:0;text-align:center;vertical-align:top">
+               <th style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:center">
+
+                <img id="icon_3" src="https://assets.fast-thinking.co.uk/client-assets/viking-cruises/emails/icons/star.png" align="center" class="float-center" style="clear: both; display: block; float: none; margin: 0px auto; outline: 0px; text-align: center; text-decoration: none;" width="29" height="29" />
+               </th>
+              </tr>
+              <tr style="padding:0;text-align:center;vertical-align:top">
+               <th class="fd_more" style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.3;margin:0;padding:0;text-align:center">
+
+                <span id="icon_3_name" style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:12px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal">USP 3</span></th>
+               </tr>
+              </table>
+             </th>
+             <th class="bt_icons" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left">
+              <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+               <tr style="padding:0;text-align:center;vertical-align:top">
+                <th style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:center">
+
+                 <img id="icon_4" src="https://assets.fast-thinking.co.uk/client-assets/viking-cruises/emails/icons/star.png" align="center" class="float-center" style="clear: both; display: block; float: none; margin: 0px auto; outline: 0px; text-align: center; text-decoration: none;" width="29" height="29" />
+                </th>
+               </tr>
+               <tr style="padding:0;text-align:center;vertical-align:top">
+                <th style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.3;margin:0;padding:0;text-align:center">
+
+                 <span id="icon_4_name" style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:12px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal">USP 4</span></th>
+                </tr>
+               </table>
+              </th>
+
+             </tr>
+            </table>
+           </th>
+          </tr>
+         </tbody>
+        </table>
+
+
+        <table class="row itin white out_only_width" style="background:#ffffff;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:center;vertical-align:top;width:100%">
+         <tbody>
+          <tr style="padding:0;text-align:center;vertical-align:top">
+           <th class="small-12 large-6 columns first fd_more_pr video_img" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0 auto;padding:0;padding-bottom:10px; padding-top:10px;padding-left:20px;padding-right:0px;text-align:center;width:384px">
+            <table class="cr_over labels_tab" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 240px; background-color: #ffffff; display: inline-block; max-height: 245px;" width="240" height="245" align="center">
+             <tbody>
+              <tr>
+               <td id="body_header" class="cr_disc" width="100%" height="29" style="color: #456580; font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 19px; font-weight: 500; line-height: 20px; text-align: center;padding-top: 15px;">body_header</td>
+              </tr>
+              <tr>
+               <td id="body_text" class="cr_disc cr_disc_pad" width="100%" height="122" style="color: #000000; font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 10px; font-weight: 600; line-height: 13px; text-align: left; max-height: 122px; min-height: 41px; -webkit-text-size-adjust: none;">BODY TEXT</td>
+              </tr>
+              <tr>
+               <td>
+                <table border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px; background-color: #ffffff; display: inline-block;" width="100%" height="33">
+                 <tbody>
+                  <tr>
+                   <td width="1"></td>
+                   <td height="30" width="100%" style="text-align: center;">
+                    <a class="bottom_tel telephone_gs_href" style="color: #333333; font-family: 'MS Sans Serif', Geneva, sans-serif; line-height: 19px; -webkit-text-size-adjust:none; display: inline-block; text-decoration: none; font-size: 15px; color: #273b51; padding-top: 2px; text-align: center; height: 19px; vertical-align: middle; z-index: 3;width: 22px;" href="PhoneNumber">
+                     <img style="vertical-align: middle;" border="0" src="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/blue_phone.png" alt="" height="17" width="22" />
+
+                     </a>
+                     <a class="telephone_gs telephone_gs_href" style="color: #333333; font-family: 'MS Sans Serif', Geneva, sans-serif; line-height: 19px; -webkit-text-size-adjust:none; display: inline-block; text-decoration: none; font-size: 15px; color: #273b51; padding-top: 1px; text-align: center; height: 16px;vertical-align: middle;" href="PhoneNumber">
+                      <b style="vertical-align: middle;">PhoneNumber</b></a>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                  <table class="button_find" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 100%; background-color: #ffffff; display: inline-block;" width="100%" height="33">
+                   <tbody>
+                    <tr>
+                     <td width="1"></td>
+                     <td class="button_find_td" height="33" width="100%">
+                      <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box; min-width: 100% !important;" width="100%">
+                       <tr>
+                        <td align="center" style="font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 16px; vertical-align: top;" valign="top">
+                         <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;max-height: 32px;">
+                          <tr>
+                           <td style="font-family: 'Trebuchet MS', Helvetica, sans-serif; font-size: 16px; vertical-align: top; background-color: #cf0944; border-radius: 5px; text-align: center;" valign="top" bgcolor="#3498db" align="center">
+                            <a id="btn_2_copy" class="btn_bd clickthrough" href="clickthrough" target="_blank" style="font-family: 'Trebuchet MS', Helvetica, sans-serif; display: inline-block; color: #ffffff; background-color: #cf0944; border: solid 1px #cf0944; border-radius: 3px; box-sizing: border-box; cursor: pointer; text-decoration: none; font-size: 16px; font-weight: 400; margin: 0; padding: 5px 25px; border-color: #cf0944;">Botton 2 Copy</a>
+                           </td>
+                          </tr>
+                         </table>
+                        </td>
+                       </tr>
+                      </table>
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </td>
+                </tr>
+               </tbody>
+              </table>
+             </th>
+
+             <th class="small-12 large-6 columns last fd_more_pr fd_more_pr_1 olen_img" valign="middle" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0; padding-left:8px;padding-right:16px;text-align:center;" width="315">
+              <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:middle;width:100%">
+               <tr>
+                <th>
+                 <table border="0" cellpadding="0" cellspacing="0" align="center" style="background-color:#ffffff; text-align:center;width:100%">
+                  <tr>
+                   <td class="video_image_td" align="center" valign="middle" style="color:#FFFFFF; font-family:'Trebuchet MS', Helvetica, sans-serif; font-size:16px; padding-right:3px; padding-left:3px;background-size: cover;" background="https://assets.fast-thinking.co.uk/client-assets/viking-cruises/emails/images/Reindeer.jpg"  width="315" height="157">
+
+  <!--[if gte mso 9]>
+  <v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:315px;height:157px;" href="CLICKTHROUGH_URL_ADD_HERE">
+    <v:fill type="tile" src="Image_source_315x157" color="#7bceeb" />
+    <v:textbox inset="0,0,0,0">
+    <div>
+  <![endif]-->
+  
+                    <a id="video_clickthrough" href="clickthrough" style="color: #333333; font: 10px Arial, sans-serif; line-height: 245px; -webkit-text-size-adjust:none; display: block;" target="_blank" align="center">
+                     <!-- <img id="video_link" class="video_img" border="0" width="315" height="157" style="display:block;" src="700x330-paris-normandy-thumbnail.jpg" alt="" align="center" /> --></a>
+  
+  <!--[if gte mso 9]>
+  </div>
+    </v:textbox>
+  </v:rect>
+  <![endif]-->
+                    </td>
+                   </tr>
+                  </table>
+                 </th>
+                </tr>
+               </table>
+              </th>
+
+             </tr>
+            </tbody>
+           </table>
+
+
+
+           <table class="bt_header out_only_width" border="0" cellpadding="0" cellspacing="0" style="margin:0; padding:0; max-width: 641px; background-color: #2b3d52;" width="100%" height="28">
+            <tbody>
+             <tr>
+
+              <td style="color: #ffffff; font: 16px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: block; font-weight: 400; text-align: center;background-color: #2b3d52; height: 24px; padding-top: 6px;" height="28" align="center" width="100%">The Viking Explorer Society</td>
+             </tr>
+            </tbody>
+           </table>
+           <table class="row itin white out_only_width" style="background:#2b3d52;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:center;vertical-align:top;width:100%">
+            <tbody>
+             <tr style="padding:0;text-align:center;vertical-align:top">
+              <th class="small-12 large-6 columns first fd_more_pr" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0 auto;padding:0;padding-bottom:10px; padding-top:8px;padding-left:20px;padding-right:0px;text-align:center;width:384px">
+               <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+                <tr style="padding:0;text-align:center;vertical-align:top">
+                 <th class="bt_icons" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left;padding-top: 2px;">
+                  <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+                   <tr style="padding:0;text-align:center;vertical-align:top">
+                    <th style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:center">
+                     <a class="latest_offer" href="latest_offer" style="color: #ffffff; font: 12px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: inline-block;text-decoration: none;" target="_blank">
+                      <img src="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/star_icon_big_3.png" align="center" class="float-center" style="clear: both; display: block; float: none; margin: 0px auto; outline: 0px; text-align: center; text-decoration: none;padding-top: 2px" width="29" height="29" /></a>
+                     </th>
+                    </tr>
+                    <tr style="padding:0;text-align:center;vertical-align:top">
+                     <th style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.3;margin:0;padding:0;text-align:center">
+                      <a class="latest_offer" href="latest_offer" style="color: #ffffff; font: 12px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: inline-block;text-decoration: none;" target="_blank">
+                       <span style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:12px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal">Latest Offers</span>
+                      </a></th>
+                     </tr>
+                    </table>
+                   </th>
+                   <th class="bt_icons" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left;padding-top: 2px;">
+                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+                     <tr style="padding:0;text-align:center;vertical-align:top">
+                      <th style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:center">
+                       <a class="swap_stories" href="swap_stories" style="color: #ffffff; font: 12px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: inline-block;text-decoration: none;" target="_blank">
+                        <img src="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/fb_icon_big.png" align="center" class="float-center" style="clear: both; display: block; float: none; margin: 0px auto; outline: 0px; text-align: center; text-decoration: none;padding-top: 2px" width="29" height="29" /></a>
+                       </th>
+                      </tr>
+                      <tr style="padding:0;text-align:center;vertical-align:top">
+                       <th style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.3;margin:0;padding:0;text-align:center">
+                        <a class="swap_stories" href="swap_stories" style="color: #ffffff; font: 12px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: inline-block;text-decoration: none;" target="_blank">
+                         <span style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:12px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal">Swap Stories</span></a></th>
+                        </tr>
+                       </table>
+                      </th>
+
+                     </tr>
+                    </table>
+                   </th>
+                   <th class="small-12 large-6 columns first fd_more_pr" style="Margin:0 auto;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0 auto;padding:0;padding-bottom:10px; padding-top:8px;padding-left:20px;padding-right:0px;text-align:center;width:384px">
+                    <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+                     <tr style="padding:0;text-align:center;vertical-align:top">
+                      <th class="bt_icons" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left;padding-top: 2px;">
+                       <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+                        <tr style="padding:0;text-align:center;vertical-align:top">
+                         <th style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:center">
+                          <a class="stay_connected" href="stay_connected" style="color: #ffffff; font: 12px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: inline-block;text-decoration: none;" target="_blank">
+                           <img src="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/tw_icon_big.png" align="center" class="float-center" style="clear: both; display: block; float: none; margin: 0px auto; outline: 0px; text-align: center; text-decoration: none;padding-top: 2px" width="29" height="29" /></a>
+                          </th>
+                         </tr>
+                         <tr style="padding:0;text-align:center;vertical-align:top">
+                          <th class="fd_more" style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.3;margin:0;padding:0;text-align:center">
+                           <a class="stay_connected" href="stay_connected" style="color: #ffffff; font: 12px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: inline-block;text-decoration: none;" target="_blank">
+                            <span style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:12px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal">Stay Connected</span></a></th>
+                           </tr>
+                          </table>
+                         </th>
+                         <th class="bt_icons" style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:left;padding-top: 2px;">
+                          <table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:center;vertical-align:top;width:100%">
+                           <tr style="padding:0;text-align:center;vertical-align:top">
+                            <th style="Margin:0;color:#ffffff;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:17px;font-weight:600;line-height:1.3;margin:0;padding:0;text-align:center">
+                             <a class="explore_experiences" href="explore_experiences" style="color: #ffffff; font: 12px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: inline-block;text-decoration: none;" target="_blank">
+                              <img src="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/YT_icon_big.png" align="center" class="float-center" style="clear: both; display: block; float: none; margin: 0px auto; outline: 0px; text-align: center; text-decoration: none;padding-top: 2px" width="29" height="29" /></a>
+                             </th>
+                            </tr>
+                            <tr style="padding:0;text-align:center;vertical-align:top">
+                             <th style="Margin:0;color:#ffffff;font-family:Helvetica,Arial,sans-serif;font-size:16px;font-weight:500;line-height:1.3;margin:0;padding:0;text-align:center">
+                              <a class="explore_experiences" href="explore_experiences" style="color: #ffffff; font: 12px 'Trebuchet MS', Helvetica, sans-serif; line-height: 20px; -webkit-text-size-adjust:none; display: inline-block;text-decoration: none;" target="_blank">
+                               <span style="Margin:0;Margin-bottom:10px;color:inherit;font-family:'Trebuchet MS', Helvetica, sans-serif;font-size:12px;line-height:1.3;margin:0;margin-bottom:10px;padding:0;text-align:center;word-break:break-all!important;word-wrap:normal">Explore Experiences</span></a></th>
+                              </tr>
+                             </table>
+                            </th>
+
+                           </tr>
+                          </table>
+                         </th>
+                        </tr>
+                       </tbody>
+                      </table>
+
+                      <table class="out_only_width" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #eff1f3">
+                       <tbody>
+                        <tr valign="top">
+                         <td width="100%">&nbsp;</td>
+                        </tr>
+                       </tbody>
+                      </table>
+
+                      <table class="out_only_width" border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color: #eff1f3">
+                       <tbody>
+                        <tr>
+                         <td width="20">
+                          <br />
+                         </td>
+                         <td valign="top">
+                          <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                           <tbody>
+                            <tr>
+                             <td style="font-family: sans-serif,Arial,Verdana; font-size: 10px; color:#333333;" class="fl full" id="mb_center_2">
+                              TERMS AND CONDITIONS 
+                             </td>
+                             <td width="23" class="h"><img src="http://wpc.475D.edgecastcdn.net/00475D/uk/Email/2014/nt_havas/spacer.gif" alt="" width="23" height="48" style="display: block;" border="0" />
+                             </td>
+                             <td class="pad-bot fl" id="mb_center"><img style="display: block;" alt="ABTA" src="http://wpc.475D.edgecastcdn.net/00475D/uk/Email/2014/Aug/viking_enq_templates/abta_120x52.png" border="0" height="52" width="120" />
+                             </td>
+                            </tr>
+                           </tbody>
+                          </table>
+                         </td>
+                         <td width="20"></td>
+                        </tr>
+                       </tbody>
+                      </table>
+
+                     </td>
+                    </tr>
+                   </tbody>
+                  </table>
+                 </td>
+                 </tr>
+                </tbody>
+               </table>
+   <custom name="opencounter" type="=Input!W12">
+<img src="https://pixel.app.returnpath.net/pixel.gif?r=4fed75242b9f8044d180c785f745ce8b35e25a55" width="1" height="1" />
+<img src="https://pixel.monitor1.returnpath.net/pixel.gif?r=4fed75242b9f8044d180c785f745ce8b35e25a55" width="1" height="1" />
+              <!-- </body>
+              </html> -->
+
+		</div>
+		
+    <div class="footer" style="background-color: #eff1f3;height: 80px;display: block;position: relative;"></div>
+    <div class="footer" style="background: #0988af;height: 120px;display: block;position: relative;;"></div>
+	</body>
+	<script>
+
+
+
+
+$(document).ready(function() {
+
+  function reqListener_dropdown () {
+    $(".dropdown_titles").html(this.responseText);
+
+    $(".dropdown_titles").find("tr").each(function(){
+      $(this).attr("class", "dropdown_tr");
+    });
+    $(".dropdown_tr").each(function(){
+      $(this).find("td").each(function(i) {
+        $(this).attr("class", "dropdown_td_" + i);
+      });
+    });
+    $(".dropdown_td_5").each(function(i){
+      $(".drop_down_filter ul").append('<li class="offer_title" id="offer_row_'+i+'">'+($(this).html())+'</li>')
+    });
+    $(".offer_title").each(function(i){
+      if($(this).html() == '&nbsp;') {
+        $(this).remove()
+    };
+    if(i<9) {
+      $(this).remove()
+    }
+    });
+
+  }
+
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListener_dropdown);
+    oReq.open("GET", "https://spreadsheets.google.com/tq?tqx=out:html&tq=select * LIMIT 150 OFFSET 0&key=1Z1WUzQLfO_5c_lDr0Sum5k0kJCurYS_Fq4-lvuQMMmo&gid=1421096052");
+    oReq.send();
+
+
+
+
+function reqListener_2 () {
+      $(".settings_container").html(this.responseText);
+    }
+
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListener_2);
+    oReq.open("GET", "https://spreadsheets.google.com/tq?tqx=out:html&tq=select * LIMIT 17 OFFSET 0&key=1Z1WUzQLfO_5c_lDr0Sum5k0kJCurYS_Fq4-lvuQMMmo&gid=1391416268");
+    oReq.send();
+
+// $(".dropbtn").click(function() {
+//   $("#myDropdown").addClass(" show");
+// });
+
+
+  $(".drop_down_filter").each(function (i) {
+    $("span", this).click(function () {
+      $(this).parents(".Filter-content").find(".top_carret").css("z-index", "4");
+      $(this).parents(".measures_i").find(".carrets").css("z-index", "4");
+      $(this).next().show()
+    });
+    $("ul li", this).click(function () {
+      var selectedText = $(this).text();
+      var selectedValue = $(this).data('value-id');
+      $(this).parents(".Filter-content").find(".top_carret").css("z-index", "2");
+      $(this).parents(".right").find(".carrets").css("z-index", "2");
+      $(this).parent().fadeOut("fast")
+      $(this).parent().find("i").remove();
+      $(this).before('<i class="fa fa-check-circle" aria-hidden="true"></i>');
+      $(this).parents(".drop_down_filter").find("span").html(selectedText);
+      $(this).parents(".drop_down_filter").data('value-id', selectedValue)
+    });
+    $("ul", this).mouseleave(function () {
+      var div = $(this).find("ul");
+      $(this).parents(".Filter-content").find(".top_carret").css("z-index", "2");
+      $(this).parents(".right").find(".carrets").css("z-index", "2");
+      $(this).fadeOut("fast")
+    });
+    $(document).mouseup(function () {
+      var div = $(this).find("ul");
+      $(this).find(".top_carret").css("z-index", "2");
+      $(this).find(".carrets").css("z-index", "2");
+      $(this).find(".drop_down_filter ul").fadeOut("fast");
+    });
+    $(document).bind('touchstart', function () {
+      if ($(event.target).closest(".drop_down_filter ul").length) return;
+      var div = $(this).find("ul");
+      $(this).find(".top_carret").css("z-index", "2");
+      $(this).find(".carrets").css("z-index", "2");
+      $(this).find(".drop_down_filter ul").fadeOut("fast");
+      event.stopPropagation();
+    });
+    $(".offer_title").click(function(){
+    var idNum = event.target.attr("id")
+    alert(idNum)
+});
+  });
+
+$("#number_of_row").keyup(function(){
+
+  var rowNum = $("#number_of_row").val();
+  
+  $("#video_clickthrough").empty();
+
+  function reqListener () {
+      $(".table_container").html(this.responseText);
+    }
+
+    var oReq = new XMLHttpRequest();
+    oReq.addEventListener("load", reqListener);
+    oReq.open("GET", "https://spreadsheets.google.com/tq?tqx=out:html&tq=select * LIMIT 1 OFFSET "+ ( rowNum - 3 ) +"&key=1Z1WUzQLfO_5c_lDr0Sum5k0kJCurYS_Fq4-lvuQMMmo&gid=1421096052");
+    oReq.send();
+  });
+
+	$(".compile").click(function(){
+
+    $("#video_clickthrough").empty();
+		$(".table_container").find("tr").each(function(i){
+			$(this).attr("id", "row_" +i );
+		});
+		$("#row_1").find("td").each(function(i){
+			$(this).attr("id", "col_" +i );
+		});
+
+		$(".settings_container").find("tr").each(function(){
+			$(this).attr("class", "row_icons");
+		});
+		$(".row_icons").each(function(){
+			$(this).find("td").each(function(i) {
+				$(this).attr("class", "col2_" + i);
+			});
+		});
+
+		var call_to_action = $("#col_9").html();
+		$("#call_to_action").html(call_to_action);
+
+		var itinerary_title = $("#col_5").html();
+		$("#itinerary_title").html(itinerary_title);
+
+		var top_image_background = $("#col_10").html();
+		$(".top_image_background").attr("background", top_image_background);
+
+		var video_image_background_315x157 = $("#col_28").html();
+		var video_image_background_600x300 = $("#col_27").html();
+		$(".video_image_td").attr("background", video_image_background_600x300);
+
+		if( $("#col_29").html() == "Video") {
+			$("#video_clickthrough").append('<img id="video_link" class="video_img" border="0" width="252" height="125" style="display:block;" src="http://image.emails.vikingrivercruises.co.uk/lib/fea115707067057f77/m/4/video_overlay_v2.png" alt="" align="center" /></a>');
+		}
+
+		var sailing_text = $("#col_13").html();
+		$("#sailing_text").html('<i style="font-family: Garamond;">Sailing:</i>&nbsp;'+sailing_text);
+
+		var duration_text = $("#col_14").html();
+		$("#duration_text").html('<i style="font-family: Garamond;">Duration:</i>&nbsp;'+duration_text+" days");
+		
+		var es_price = $("#col_15").html();
+		$("#es_price").html("Explorer Society from £"+es_price+"pp");
+
+		var new_price = $("#col_16").html();
+		$("#new_price").html("New to Viking from £"+new_price+"pp");
+
+		var btn_1_copy = $("#col_17").html();
+		$("#btn_1_copy").html(btn_1_copy);
+
+		var latest_offer_ocean = "https://www.vikingcruises.co.uk/oceans/cruise-destinations/index.html";
+		var latest_offer_river = "http://www.vikingrivercruises.co.uk";
+		var clickthrough = $("#col_18").html();
+		var tracking_full = $("#col_19").html();
+		var tracking_cut_1 = tracking_full.substr(63);
+		var tracking_cut_2 = tracking_cut_1.substr(0, tracking_cut_1.length - 20)
+		var tracking = "?utm_source=Exact_Target&utm_medium=email&utm_campaign=" + tracking_cut_2 + "&refsrcprg=email";
+		var logo_url = "http://www.vikingcruises.co.uk";
+		var swap_stories = "https://www.facebook.com/VikingCruisesUK";
+		var stay_connected = "https://twitter.com/VikingCruisesUK";
+		var explore_experiences = "https://www.youtube.com/user/Vikingrivercruises/featured";
+		var contact_us = "http://www.vikingrivercruises.co.uk/contact/index.html";
+		var click_here = "https://www.vikingcruises.co.uk/terms-conditions/index.html";
+		var video_clickthrough = $("#col_30").html();
+		$("#clickthrough_logo").attr("href", logo_url+tracking);
+		$(".clickthrough").attr("href", clickthrough+tracking);
+		$(".swap_stories").attr("href", swap_stories+tracking);
+		$(".stay_connected").attr("href", stay_connected+tracking);
+		$(".explore_experiences").attr("href", explore_experiences+tracking);
+		$("#click_here").attr("href", click_here+tracking);
+		$("#video_clickthrough").attr("href", video_clickthrough+tracking);
+
+		if($("#col_7").text() == "Viking River Cruises") {
+			$(".telephone_gs").html("0800&nbsp;3196464");
+			$(".telephone_gs_href").attr("href", "tel://0-800-319-6464");
+			$(".latest_offer").attr("href", latest_offer_river+ tracking);
+		} else if ($("#col_7").text() == "Viking Ocean Cruises") {
+			$(".telephone_gs").html("0800&nbsp;2989200");
+			$(".telephone_gs_href").attr("href", "tel://0-800-298-9200");
+			$(".latest_offer").attr("href", latest_offer_ocean+ tracking);
+		}
+
+		//ICONS
+		var icon_1 = $("#col_20");
+		var icon_1 = $(icon_1).text();
+		var icon_1_icon = $("#icon_1");
+		var icon_1_name = $("#icon_1_name");
+		var icon_2 = $("#col_21");
+		var icon_2 = $(icon_2).text();
+		var icon_2_icon = $("#icon_2");
+		var icon_2_name = $("#icon_2_name");
+		var icon_3 = $("#col_22");
+		var icon_3 = $(icon_3).text();
+		var icon_3_icon = $("#icon_3");
+		var icon_3_name = $("#icon_3_name");
+		var icon_4 = $("#col_23");
+		var icon_4 = $(icon_4).text();
+		var icon_4_icon = $("#icon_4");
+		var icon_4_name = $("#icon_4_name");
+
+		findIcon(icon_1, icon_1_icon, icon_1_name);
+		findIcon(icon_2, icon_2_icon, icon_2_name);
+		findIcon(icon_3, icon_3_icon, icon_3_name);
+		findIcon(icon_4, icon_4_icon, icon_4_name);
+
+		function findIcon(icon, icon_web, name) {
+			$(".col2_1").each(function(i) {
+				var icon_from_list = $(this);
+				var icon_from_list_html = icon_from_list.text();
+				if(icon_from_list_html == icon) {
+					name.html(icon_from_list_html);
+					icon_web.attr("src", icon_from_list.next().text());
+				}
+			});
+		};
+
+		var body_header = $("#col_24").html();
+		$("#body_header").html(body_header);
+
+		var body_text = $("#col_25").html();
+		$("#body_text").html(body_text);
+		
+		var btn_2_copy = $("#col_26").html();
+		$("#btn_2_copy").html(btn_2_copy);
+
+		var offer_start = $("#col_34").html();
+		var offer_end = $("#col_35").html();
+		var saling_date = $("#col_36").html();
+		var custom_tac = $("#col_37").html();
+		var terms_full ='Full terms and conditions apply, to read our full terms and conditions <a href="'+contact_us+tracking+'" target="_blank">click here</a>. Offer applies to new Paris & the Heart of Normandy bookings only made between '+offer_start+' to '+offer_end+' based on selected '+saling_date+' sailing dates. '+custom_tac+' This offer is an email exclusive and not available on our website. This offer cannot be combined with any other special offer or discount. All offers can be withdrawn at any time. Price quoted is based on f-grade stateroom and is not available via our website.Should you wish to <a id="contact_us" href="contact_us" target="_blank">contact us</a> you can find our contact details on our website. If you would prefer not to receive future emails from us, please update your <a target="_blank" href="%%profile_center_url%%">Viking profile</a> or <a target="_blank" href="%%unsub_center_url%%">unsubscribe.</a> <br /><br />This email was sent by: <b>%%Member_Busname%%</b> %%Member_Addr%% %%Member_City%%, %%Member_State%%, %%Member_PostalCode%%, %%Member_Country%%<br /><br />'
+		$("#mb_center_2").html(terms_full);
+
+		//OUTLOOK
+		
+		$('.top_image_background').html($('.top_image_background').html().replace('TOP_IMAGE_HERE', top_image_background ));
+		$('.top_image_background').html($('.top_image_background').html().replace('CLICKTHROUGH_URL_ADD_HERE', clickthrough+tracking ));
+		$('#win_10_top_img').html($('#win_10_top_img').html().replace('TOP_IMAGE_HERE', top_image_background ));
+		$('.video_image_td').html($('.video_image_td').html().replace('Image_source_315x157', video_image_background_315x157 ));
+		$('.video_image_td').html($('.video_image_td').html().replace('CLICKTHROUGH_URL_ADD_HERE', video_clickthrough+tracking ));
+
+
+		//Put the code to textarea
+
+		var doctype = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head> <title>Viking River Cruises</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="robots" content="noindex"><meta name="x-apple-disable-message-reformatting">'
+		var style_1 = '<style>.ReadMsgBody{width:100%}.ExternalClass{width:100%}.outlook_hidden{display:inline-table!important;max-height:none!important}.olen_img{width:54%!important}.olen_img img{width:100%!important;height:initial}body,table,tr,td,br,strong,span,a,img{mso-line-height-rule:exactly;line-height:normal;font-family:Arial,Verdana,sans-serif;border-collapse:collapse;-webkit-text-size-adjust:none}table td{border-collapse:collapse}.width_350{width:350px !important}#video_link{width: 315px !important;height: 157px !important;}@media only screen and (max-width:673px){.cr_vid{max-width:641px!important}.cr_vid,.cr_vid_100{width:100%!important;padding-left:0!important}.cr_disc_pad{text-align:center!important;padding:0 15px!important;height:initial!important}.cr_vid,.cr_vid_100{height:initial!important}.over_vid{height:545px!important}.labels_tab_pb{padding-bottom:5px!important}.cr_disc_pad{max-height:55px!important}.wrapper_table{width:100%!important}.video_image_td{width:100% !important}}@media only screen and (max-width:670px){.cr_over{width:100%!important;height:170px!important;max-width:641px!important}th.video_img{width:100%!important;display:block!important}table.cr_vid{padding-right:0!important;padding-bottom:10px!important}th.top_ch{display:inline-block!important;width:100%!important;padding-left:0!important;padding-right:0!important;padding-bottom:0!important}th.fd_more_pr_1{width:100%!important;padding-bottom:10px!important}th.fd_more,th.fd_more span{text-align:center!important}th.fd_more,th.fd_more_pr{display:block!important}th.fd_more_pr{padding-left:0!important;padding-right:0!important}th.top_ch_next{padding-top:5px!important;padding-bottom:5px!important}tr.to_ch_inside{display:inline-block!important}tr.to_ch_inside h3{margin-top:5px!important;margin-bottom:5px!important}th.bt_icons{width:50%!important}}@media only screen and (max-width:668px){.labels_top{height:149px!important;min-height:149px!important}.label_w100{width:100%!important}}@media only screen and (max-width:650px){.video_img{width:100%!important}.cr_disc_pad{padding:0 5px!important}}@media only screen and (max-width:640px){.lf_button_find_inside{width:100%!important;max-width:100%!important;display:block!important;text-align:center}.lf_button_find{width:100%!important;max-width:100%!important;display:block!important;text-align:center!important;height:55px!important}.button_find{width:100%!important;max-width:100%!important;display:block!important}.button_find_td{text-align:center!important;width:100%}.w100_570{text-align:center!important;width:100%!important;display:table-cell!important}.lf_button_find_td{width:100%!important;text-align:center!important}.w1{width:1px!important}.w100_570{text-align:center!important;width:100%!important;display:table-cell!important}}@media only screen and (max-width:630px){.hidden_550{display:none!important;width:0!important}.exclusive{width:100%!important;max-width:100%!important;height:60px!important}.exclusive_2{width:100%!important;max-width:100%!important;height:5px!important}.exclusive_2 span{display:inline-block!important}.exc2{height:25px!important}}@media only screen and (max-width:602px){.lf_button_find{width:100%!important;max-width:100%!important;display:block!important;text-align:center!important;height:55px!important}.button_find{width:100%!important;max-width:100%!important;display:block!important}.button_find_td{text-align:center!important;width:100%}.w100_570{text-align:center!important;width:100%!important;display:table-cell!important}.lf_button_find_td{width:100%!important;text-align:center!important}.cr_disc_pad{max-height:41px!important}.over_vid{height:545px!important}}@media only screen and (max-width:600px){.cr_vid,.cr_over,.cr_vid_100{width:100%!important}.cr_disc_pad{text-align:center!important;padding:0 15px!important;height:initial!important}.cr_over{height:210px!important}.cr_vid,.cr_vid_100{height:initial!important}.btn_bd{border-radius:1px!important}.lf_button_find_inside{width:100%!important;max-width:100%!important;display:block!important;text-align:center}.lf_button_find_td{width:100%!important;text-align:center!important}}@media only screen and (max-width:602px){.lf_button_find{width:100%!important;max-width:100%!important;display:block!important;text-align:center;height:55px!important}.button_find{width:100%!important;max-width:100%!important;display:block}.lf_button_find_inside{width:100%!important;max-width:100%!important;display:block!important;text-align:center}.button_find_td{text-align:center!important;width:100%}.lf_button_find_td{width:100%!important;text-align:center!important}.w1{width:1px!important}.w100_570{text-align:center!important;width:100%!important;display:table-cell!important}.fw_100{font-weight:100!important}.cr_over,.cr_disc,.labels_tab{width:100%!important}}@media only screen and (max-width:575px){.hidden_570{width:19px!important}}@media only screen and (max-width:570px){.hidden_570{display:none!important}}@media only screen and (max-width:550px){.hidden_550{display:none!important;width:0!important}.exclusive{width:100%!important;max-width:100%!important;height:60px!important}.exclusive_2{width:100%!important;max-width:100%!important;height:5px!important}.exclusive_2 span{display:inline-block!important}.exc2{height:25px!important}.bf_explorer{width:15px!important;max-width:15px!important}.af_explorer_1{letter-spacing:-.5px;font-size:16px!important}.lf_button_find_inside{height:60px!important}.second_header{height:86px!important}}@media only screen and (max-width:515px){.cr_disc_pad{max-height:70px!important}}@media only screen and (max-width:486px){.fst_labels{width:49%!important;height:84px!important}.labels_tab{height:169px!important}.fst_labels img{width:35px!important;height:35px!important}.bt_header,.bt_header td{height:40px!important;vertical-align:bottom;font-size:14px!important}.bt_header td{height:34px!important}.bt_labels,.bt_labels table,.bt_labels td{vertical-align:top!important;padding-top:0!important}.over_vid{height:480px!important}.cr_over{height:210px!important}}@media only screen and (max-width:460px){[class].fl{float:left!important}[class].wr{display:block!important}[class].h{display:none!important}[class].cen{margin:0 auto!important}[class].full{width:300px!important;overflow:hidden}[class].pad{float:left!important;width:90%!important;padding:10px 5%}[class].nh{height:inherit!important}[class].left{text-align:left!important}[class].padterm{float:left!important;width:90%!important;padding:5px 5%}[class].contain{background-size:100%;background-position:right top}[class].m-image-container{width:100%!important;height:inherit!important;max-height:inherit!important;display:block!important;visibility:visible!important;margin:0;padding:0}[class].m-image-full{width:100%!important;height:inherit!important;display:block!important;float:left}[class=w50]{width:50%!important;box-shadow:inset 0 0 2px #ddd;float:left;vertical-align:middle;padding:12px 0;height:16px!important;margin:0;line-height:none!important;text-align:center!important}[class=w100]{width:100%!important;box-shadow:inset 0 0 2px #ddd;float:left;vertical-align:middle;padding:12px 0;height:16px!important;margin:0;line-height:none!important;text-align:center!important}[class=w50-2line]{width:50%!important;box-shadow:inset 0 0 2px #d6d6d6;float:left;vertical-align:middle;padding:7px 0 5px;height:30px!important;margin:0;line-height:none!important}[class].w264{width:264px!important}[class].pad-bot{padding:0 0 10px}[class].hero-height{margin-top:260px}[class].w160{width:180px!important}[class].pad-box{float:left!important;width:80%!important;margin:95px 5% 0;padding:10px 5%}[class].pad-box-2{float:left!important;width:100%!important;margin:5px 5% 0;padding:10px 5%}[class].borderbot{border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#ededed}[class].pad3{padding-bottom:3px}.phone{display:none}.media_width{width:23px}.fl_right img{float:right}.bf_explorer{width:15px!important;max-width:15px!important}.af_explorer{width:226px!important;max-width:226px!important}.explorer{width:252px!important;max-width:252px!important}.valid{width:200px!important;max-width:200px!important}.cr_vid,.cr_vid_100{height:250px!important}#mb_center,#mb_center_2{text-align:center;width:100%!important}#mb_center img,#mb_center_2 img{text-align:center;display:inline-block!important}.fl_right a{width:22px!important;height:17px!important;padding:10px}.bottom_tel{width:22px!important;height:17px!important;padding:2px 4px}}@media only screen and (max-width:440px){.cr_disc_pad{max-height:55px!important}}@media only screen and (max-width:415px){.cr_disc_pad{max-height:82px!important}}@media only screen and (max-width:378px){.over_vid{height:461px!important}.cr_disc_pad{max-height:96px!important}}@media only screen and (max-width:373px){.logo_top{width:208px!important}.media_width{width:10px!important}}@media only screen and (max-width:360px){.lf_button_find{height:initial!important}}</style>'
+    var style_2 = '<!--[if gt mso 9]> <style type="text/css" media="all"> table,tr,td{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}tr{font-size:0;line-height:0;border-collapse:collapse}table.wrapper_table{width="641px;max-width=641px"}table.out_only_width{width:550px !important}th.olen_img{width:315px !important;height:210px !important}th.olen_img img{width:315px !important;height:210px !important}</style> <![endif]--> <!--[if gt mso 15]> <style type="text/css" media="all"> table,tr,td{border-collapse:collapse;mso-table-lspace:0;mso-table-rspace:0}tr{font-size:0;line-height:0;border-collapse:collapse}</style> <![endif]-->'
+    var style_3 = '<style> @media only screen{html{min-height:100%;background:#f3f3f3}}@media only screen and (max-width:616px){table.body table.container .show-for-large{display:none!important;width:0;mso-hide:all;overflow:hidden}table.body img{width:auto;height:auto}table.body center{min-width:0!important}table.body .column,table.body .columns{height:auto!important;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:16px!important;padding-right:16px!important}table.body .column .column,table.body .column .columns,table.body .columns .column,table.body .columns .columns{padding-left:0!important;padding-right:0!important}table.body .collapse .column,table.body .collapse .columns{padding-left:0!important;padding-right:0!important}td.small-12,th.small-12{display:inline-block!important;width:100%!important}.column td.small-12,.column th.small-12,.columns td.small-12,.columns th.small-12{display:block!important;width:100%!important}.itin h3{font-size:14px}}</style>'
+    var headEnd = '<custom name="opencounter" type="tracking"> </head> <body style="background-color:#eff1f3;"> <div style="display:none;font-size:0;line-height:0;max-height:0;max-width:0;width:0;opacity:0;overflow:hidden;">0800 3196464 Exclusive Offer brought to you by the Viking Explorer Society </div>'
+		var footerToPaste = '<custom name="opencounter" type="=Input!W12"><img src="https://pixel.app.returnpath.net/pixel.gif?r=4fed75242b9f8044d180c785f745ce8b35e25a55" width="1" height="1"><img src="https://pixel.monitor1.returnpath.net/pixel.gif?r=4fed75242b9f8044d180c785f745ce8b35e25a55" width="1" height="1"> </body> </html>'
+		var outerHTMLcopy = $('.table_for_copy_outerhtml')[0].outerHTML
+		$('.outerHTML').val(doctype+style_1+style_2+style_3+headEnd+outerHTMLcopy+footerToPaste);
+
+		$('.outerHTML').val($('.outerHTML').val().replace(/&amp;/ig, '&'));
+
+		
+	});
+});
+new Clipboard('.btn-clipboard');
+
+
+	</script>
+</html>
